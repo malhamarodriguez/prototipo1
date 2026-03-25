@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ALH Partners | Consultoría Estratégica de Marketing</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Noto+Serif:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8c357",
+                        "primary-container": "#b8962e",
+                        "on-primary": "#3d2f00",
+                        "on-primary-container": "#3f3000",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "surface-variant": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "on-surface-variant": "#d0c5b0",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313",
+                        "outline": "#99907d",
+                        "outline-variant": "#4d4636",
+                        "secondary": "#c8c6c5",
+                        "tertiary": "#c7c6c6",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#745b00",
+                        "surface-tint": "#e8c357",
+                        "primary-fixed": "#ffe08d",
+                        "primary-fixed-dim": "#e8c357"
+                    },
+                    fontFamily: {
+                        "headline": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"],
+                        "brand": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "2px",
+                        "lg": "4px",
+                        "xl": "8px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-display {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+        .letter-spacing-widest {
+            letter-spacing: 0.2em;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-on-surface font-body antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TOP NAVIGATION BAR                          -->
+<!-- ═══════════════════════════════════════════ -->
+<nav class="fixed top-0 w-full z-50 bg-[#0E0E0E]/80 backdrop-blur-xl border-b border-[#4D4636]/20">
+    <div class="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1920px] mx-auto">
+        <a href="#" class="font-headline text-2xl font-serif text-white italic">
+            Alh Partners
+        </a>
+        <div class="hidden md:flex items-center space-x-10 font-label text-[0.75rem] uppercase tracking-[0.1em]">
+            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
+            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
+            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
+            <a href="#conversion" class="bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none hover:opacity-90 transition-all duration-300 active:scale-95 inline-block">
+                Reservar llamada
+            </a>
+        </div>
+        <!-- Mobile Menu Icon -->
+        <button id="mobile-menu-btn" class="md:hidden">
+            <span class="material-symbols-outlined text-white">menu</span>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 space-y-4 font-label text-[0.75rem] uppercase tracking-[0.1em]">
+        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
+        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
+        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
+        <a href="#conversion" class="block bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none text-center">
+            Reservar llamada
+        </a>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- HERO SECTION                                -->
+<!-- ═══════════════════════════════════════════ -->
+<main class="relative min-h-screen flex flex-col justify-center bg-[#0A0A0A] overflow-hidden" id="hero">
+    <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-[120px]">
+        <div class="max-w-4xl">
+            <!-- Main Headline -->
+            <h1 class="font-headline text-5xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.05] tracking-tight mb-10">
+                Construimos marcas que dominan mercados.
+            </h1>
+            <!-- Subheadline -->
+            <p class="font-body text-[#A0A0A0] text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+                Consultoría estratégica de marketing y crecimiento para empresas listas para escalar.
+            </p>
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-10">
+                <a href="#conversion" class="group px-8 py-5 bg-[#B8962E] text-white font-bold text-sm tracking-wide uppercase rounded-[2px] transition-all duration-300 hover:brightness-110 flex items-center">
+                    Reservar llamada gratuita
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a class="font-label text-[#A0A0A0] hover:text-white transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#servicios">
+                    Ver nuestros servicios
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Stats Section -->
+    <div class="mt-auto w-full">
+        <!-- Signature Divider -->
+        <div class="w-full h-[1px] bg-[#B8962E]/40"></div>
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                <div class="space-y-1">
+                    <p class="font-body text-white text-3xl font-bold tracking-tight">50+</p>
+                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">CLIENTES ATENDIDOS</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-body text-white text-3xl font-bold tracking-tight">4</p>
+                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">ÁREAS DE SERVICIO</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-body text-white text-3xl font-bold tracking-tight">100%</p>
+                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">ENFOQUE EN RESULTADOS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- GALLERY SECTION                             -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="bg-surface py-24 px-6 md:px-12">
+    <div class="max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-8 h-[500px] relative overflow-hidden group">
+                <img alt="Premium Office" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnrNcrjfZuQJ4Ddr8dqw2DqzhNRQ0BuQSzvo3kO1eOPIDYZ7VJ9bLomTzq_fpTyM702sZ_BYUfwRKCqiZpV2f0UvE_3G0lcxUm6lckajuiGmZUfhQEbOCAvYI1D_unn4S8TVehdUvieTyujdNewPV8lpvZCWUe2qH8mow2C3IoQX3-IQgzAtyn45LHqSjZko0oQOmnjOOZWXVZuYuhddhOuyzPvRKd1n19PiIyaYfjXtMFGO2CotTPH1OyWxPpoHZraYdYCp8hAyE"/>
+                <div class="absolute inset-0 bg-surface-container-lowest/40 group-hover:bg-transparent transition-colors duration-700"></div>
+            </div>
+            <div class="md:col-span-4 h-[500px] bg-surface-container-high p-12 flex flex-col justify-end border-l border-primary-container/20">
+                <span class="material-symbols-outlined text-primary-container text-4xl mb-6" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">workspace_premium</span>
+                <h3 class="font-headline text-3xl mb-4 text-white">Excelencia Ejecutiva</h3>
+                <p class="text-[#A0A0A0] leading-relaxed">No solo asesoramos. Transformamos la percepción de valor de su empresa en el mercado global.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SERVICIOS SECTION                           -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-[120px] bg-[#111111]" id="servicios">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <header class="mb-24">
+            <p class="text-[#B8962E] font-label font-bold text-[0.75rem] uppercase tracking-[0.2em] mb-6">QUÉ HACEMOS</p>
+            <h2 class="serif-display text-4xl md:text-[4.5rem] leading-[1.1] text-white max-w-3xl font-black">Cuatro vías para hacer crecer su negocio.</h2>
+        </header>
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#2A2A2A] border border-[#2A2A2A] rounded-[2px] overflow-hidden">
+            <!-- Card I -->
+            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
+                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">I.</div>
+                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Marketing Digital y Medios Pagados</h3>
+                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Ejecutamos campañas de alto rendimiento en Google, Meta y más allá, centradas en el ROI, no en métricas de vanidad.</p>
+            </div>
+            <!-- Card II -->
+            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
+                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">II.</div>
+                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Crecimiento y Ventas</h3>
+                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Mapeamos y optimizamos todo su embudo de ventas, convirtiendo prospectos fríos en clientes leales.</p>
+            </div>
+            <!-- Card III -->
+            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
+                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">III.</div>
+                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Consultoría Estratégica</h3>
+                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Antes de actuar, pensamos. Diagnosticamos su negocio y diseñamos una estrategia para superar a su competencia.</p>
+            </div>
+            <!-- Card IV -->
+            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
+                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">IV.</div>
+                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Branding e Identidad</h3>
+                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Su marca es su primera impresión. Creamos identidades visuales que captan la atención y generan confianza.</p>
+            </div>
+        </div>
+        <!-- Footer Line -->
+        <div class="mt-24 w-full h-px bg-[#B8962E]/30"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SOBRE NOSOTROS SECTION                      -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="bg-[#0A0A0A] py-[120px] px-6 md:px-12 lg:px-24" id="nosotros">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-16 items-start">
+        <!-- Left Column (60%) -->
+        <div class="lg:col-span-6 space-y-10">
+            <div class="space-y-4">
+                <span class="text-primary font-label text-[0.75rem] uppercase tracking-[0.2em] font-bold">QUIÉNES SOMOS</span>
+                <h2 class="serif-display text-5xl md:text-8xl text-white leading-tight">
+                    Una agencia diferente.
+                </h2>
+            </div>
+            <div class="space-y-8 max-w-2xl">
+                <p class="font-body text-[15px] leading-relaxed text-[#A0A0A0]">
+                    En Alh Partners no vendemos servicios — construimos resultados. Trabajamos con pequeñas empresas y emprendedores que quieren crecer de verdad, no solo tener una web bonita.
+                </p>
+                <p class="font-body text-[15px] leading-relaxed text-[#A0A0A0]">
+                    Combinamos estrategia, creatividad y datos para crear sistemas de marketing que funcionan a largo plazo. Sin humo, sin promesas vacías.
+                </p>
+            </div>
+            <!-- Signature Divider -->
+            <div class="w-24 h-[1px] bg-primary-container"></div>
+        </div>
+        <!-- Right Column (40%) -->
+        <div class="lg:col-span-4">
+            <div class="bg-[#1C1C1C] border border-[#2A2A2A] rounded-[2px] p-10 md:p-14 shadow-2xl">
+                <div class="flex flex-col gap-12">
+                    <!-- Metric 1 -->
+                    <div class="space-y-3">
+                        <div class="serif-display text-[56px] leading-none text-white">50+</div>
+                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">CLIENTES ATENDIDOS</div>
+                    </div>
+                    <hr class="border-[#2A2A2A]"/>
+                    <!-- Metric 2 -->
+                    <div class="space-y-3">
+                        <div class="serif-display text-[56px] leading-none text-white">4</div>
+                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">ÁREAS DE SERVICIO</div>
+                    </div>
+                    <hr class="border-[#2A2A2A]"/>
+                    <!-- Metric 3 -->
+                    <div class="space-y-3">
+                        <div class="serif-display text-[56px] leading-none text-white">100%</div>
+                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">ENFOQUE EN RESULTADOS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section Closing Line -->
+    <div class="mt-[120px] max-w-7xl mx-auto">
+        <div class="w-full h-[1px] bg-primary-container opacity-40"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CONVERSIÓN SECTION                          -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="flex flex-col items-center justify-center py-[140px] px-6 text-center bg-[#111111] relative overflow-hidden" id="conversion">
+    <!-- Label -->
+    <div class="mb-8">
+        <span class="text-[#E8C357] font-label text-xs font-bold letter-spacing-widest uppercase inline-block" style="letter-spacing: 0.2em;">¿LISTO PARA CRECER?</span>
+    </div>
+    <!-- Headline -->
+    <h2 class="serif-display text-white text-5xl md:text-7xl font-bold mb-8 max-w-4xl leading-tight">
+        Hablemos de tu negocio.
+    </h2>
+    <!-- Subtitle -->
+    <p class="font-body text-[#A0A0A0] text-lg md:text-xl font-light mb-12 max-w-2xl leading-relaxed">
+        Reserva una llamada estratégica gratuita de 30 minutos. Sin compromisos.
+    </p>
+    <!-- CTA Button -->
+    <div class="group relative mb-10">
+        <button class="bg-[#B8962E] text-white font-bold text-[16px] px-12 py-[20px] rounded-[2px] transition-all duration-300 hover:brightness-110 active:scale-95 flex items-center gap-4">
+            Reservar llamada gratuita
+            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+        </button>
+        <!-- Interaction Glow -->
+        <div class="absolute -inset-1 bg-[#B8962E] opacity-0 blur-xl group-hover:opacity-10 transition-opacity duration-500 rounded-full"></div>
+    </div>
+    <!-- Assurance Label -->
+    <p class="text-[#606060] font-label text-[11px] uppercase tracking-widest font-medium">
+        Respondemos en menos de 24 horas.
+    </p>
+    <!-- Bottom Line -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-[#B8962E]/30"></div>
+</section>
+
+<!-- Quote Section -->
+<section class="py-24 bg-surface text-center">
+    <div class="max-w-4xl mx-auto px-8">
+        <div class="w-12 h-[1px] bg-primary mx-auto mb-12"></div>
+        <p class="serif-display italic text-2xl text-on-surface-variant opacity-60">
+            "La estrategia no es el resultado de la suerte, sino del diseño intencional."
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CONTACTO SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-[120px] px-6 md:px-12 bg-[#0A0A0A]" id="contacto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+        <!-- Left Column -->
+        <div class="flex flex-col justify-start">
+            <span class="text-[#E8C357] font-body text-[0.75rem] uppercase tracking-[0.2em] mb-4">CONTACTO</span>
+            <h2 class="serif-display text-white text-5xl md:text-6xl mb-12 leading-tight tracking-tighter">
+                ¿Tienes alguna pregunta?
+            </h2>
+            <div class="space-y-8 mt-4">
+                <div class="flex flex-col">
+                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">Email</span>
+                    <span class="text-[#A0A0A0] text-lg font-light">hola@alhpartners.com</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">LinkedIn</span>
+                    <span class="text-[#A0A0A0] text-lg font-light">/company/alhpartners</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">Ubicación</span>
+                    <span class="text-[#A0A0A0] text-lg font-light">España</span>
+                </div>
+            </div>
+        </div>
+        <!-- Right Column - Form -->
+        <div class="flex flex-col">
+            <form class="space-y-10" onsubmit="event.preventDefault();">
+                <div>
+                    <input class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300" placeholder="Nombre" type="text"/>
+                </div>
+                <div>
+                    <input class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300" placeholder="Email" type="email"/>
+                </div>
+                <div>
+                    <textarea class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300 resize-none" placeholder="Mensaje" rows="4"></textarea>
+                </div>
+                <div class="pt-6">
+                    <button class="bg-[#B8962E] text-white font-bold py-[14px] px-[32px] rounded-[2px] hover:bg-[#A38528] transition-colors duration-300 tracking-wide uppercase text-sm" type="submit">
+                        Enviar mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FOOTER                                      -->
+<!-- ═══════════════════════════════════════════ -->
+<footer class="bg-[#0A0A0A] border-t border-[#B8962E]/30">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-[80px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <!-- Footer Left -->
+            <div class="flex flex-col">
+                <h2 class="serif-display text-white text-[20px] mb-2 tracking-tight">Alh Partners</h2>
+                <p class="text-[#A0A0A0] font-body text-sm tracking-wide">Marketing · Growth · Strategy</p>
+            </div>
+            <!-- Footer Central -->
+            <div class="flex flex-col space-y-4">
+                <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-2">Secciones</span>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#servicios">Servicios</a>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#nosotros">Quiénes somos</a>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#conversion">Reservar llamada</a>
+            </div>
+            <!-- Footer Right -->
+            <div class="flex flex-col space-y-4">
+                <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-2">Síguenos</span>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-white transition-colors" href="#">LinkedIn</a>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-white transition-colors" href="#">Instagram</a>
+            </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="pt-12 mt-16 border-t border-white/5 flex justify-center">
+            <p class="text-[#606060] text-[11px] font-light tracking-wider">
+                © 2025 Alh Partners. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    });
+</script>
+
+</body>
+</html>
