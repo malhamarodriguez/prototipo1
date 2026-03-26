@@ -7,19 +7,6 @@
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Noto+Serif:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <!-- Vercel Web Analytics -->
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -99,7 +86,7 @@
             <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
             <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
             <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
-            <a href="#conversion" class="bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none hover:opacity-90 transition-all duration-300 active:scale-95 inline-block">
+            <a href="#calendly" class="bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none hover:opacity-90 transition-all duration-300 active:scale-95 inline-block">
                 Reservar llamada
             </a>
         </div>
@@ -113,7 +100,7 @@
         <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
         <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
         <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
-        <a href="#conversion" class="block bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none text-center">
+        <a href="#calendly" class="block bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none text-center">
             Reservar llamada
         </a>
     </div>
@@ -135,7 +122,7 @@
             </p>
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-10">
-                <a href="#conversion" class="group px-8 py-5 bg-[#B8962E] text-white font-bold text-sm tracking-wide uppercase rounded-[2px] transition-all duration-300 hover:brightness-110 flex items-center">
+                <a href="#calendly" class="group px-8 py-5 bg-[#B8962E] text-white font-bold text-sm tracking-wide uppercase rounded-[2px] transition-all duration-300 hover:brightness-110 flex items-center">
                     Reservar llamada gratuita
                     <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
@@ -302,10 +289,10 @@
     </p>
     <!-- CTA Button -->
     <div class="group relative mb-10">
-        <button class="bg-[#B8962E] text-white font-bold text-[16px] px-12 py-[20px] rounded-[2px] transition-all duration-300 hover:brightness-110 active:scale-95 flex items-center gap-4">
+        <a href="#calendly" class="bg-[#B8962E] text-white font-bold text-[16px] px-12 py-[20px] rounded-[2px] transition-all duration-300 hover:brightness-110 active:scale-95 flex items-center gap-4 no-underline">
             Reservar llamada gratuita
             <span class="material-symbols-outlined text-xl">arrow_forward</span>
-        </button>
+        </a>
         <!-- Interaction Glow -->
         <div class="absolute -inset-1 bg-[#B8962E] opacity-0 blur-xl group-hover:opacity-10 transition-opacity duration-500 rounded-full"></div>
     </div>
@@ -324,6 +311,32 @@
         <p class="serif-display italic text-2xl text-on-surface-variant opacity-60">
             "La estrategia no es el resultado de la suerte, sino del diseño intencional."
         </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CALENDLY SECTION                            -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-[100px] px-6 md:px-12 bg-[#0A0A0A]" id="calendly">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+        <span class="text-[#E8C357] font-label text-xs font-bold uppercase inline-block mb-6" style="letter-spacing: 0.2em;">AGENDA TU CITA</span>
+        <h2 class="serif-display text-white text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Reserva tu llamada gratuita
+        </h2>
+        <p class="font-body text-[#A0A0A0] text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+            30 minutos para transformar tu negocio. Sin compromisos.
+        </p>
+    </div>
+    <div class="max-w-4xl mx-auto">
+        <!-- Calendly inline widget -->
+        <div class="calendly-inline-widget"
+            data-url="https://calendly.com/alhpartners?background_color=0a0a0a&text_color=e5e2e1&primary_color=b8962e"
+            style="min-width:320px;height:700px;">
+        </div>
+    </div>
+    <!-- Section Closing Line -->
+    <div class="mt-[80px] max-w-7xl mx-auto">
+        <div class="w-full h-[1px] bg-primary-container opacity-40"></div>
     </div>
 </section>
 
@@ -391,7 +404,7 @@
                 <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-2">Secciones</span>
                 <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#servicios">Servicios</a>
                 <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#nosotros">Quiénes somos</a>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#conversion">Reservar llamada</a>
+                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#calendly">Reservar llamada</a>
             </div>
             <!-- Footer Right -->
             <div class="flex flex-col space-y-4">
@@ -408,6 +421,9 @@
         </div>
     </div>
 </footer>
+
+<!-- Calendly Widget Script -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <!-- Mobile Menu Toggle Script -->
 <script>
