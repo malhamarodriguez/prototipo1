@@ -1,442 +1,1310 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+<html lang="es">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>ALH Partners | Consultoría Estratégica de Marketing</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Noto+Serif:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#e8c357",
-                        "primary-container": "#b8962e",
-                        "on-primary": "#3d2f00",
-                        "on-primary-container": "#3f3000",
-                        "surface": "#131313",
-                        "surface-dim": "#131313",
-                        "surface-bright": "#3a3939",
-                        "surface-container-lowest": "#0e0e0e",
-                        "surface-container-low": "#1c1b1b",
-                        "surface-container": "#201f1f",
-                        "surface-container-high": "#2a2a2a",
-                        "surface-container-highest": "#353534",
-                        "surface-variant": "#353534",
-                        "on-surface": "#e5e2e1",
-                        "on-surface-variant": "#d0c5b0",
-                        "on-background": "#e5e2e1",
-                        "background": "#131313",
-                        "outline": "#99907d",
-                        "outline-variant": "#4d4636",
-                        "secondary": "#c8c6c5",
-                        "tertiary": "#c7c6c6",
-                        "error": "#ffb4ab",
-                        "inverse-surface": "#e5e2e1",
-                        "inverse-primary": "#745b00",
-                        "surface-tint": "#e8c357",
-                        "primary-fixed": "#ffe08d",
-                        "primary-fixed-dim": "#e8c357"
-                    },
-                    fontFamily: {
-                        "headline": ["Playfair Display", "serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"],
-                        "brand": ["Noto Serif", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "2px",
-                        "lg": "4px",
-                        "xl": "8px",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .serif-display {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: -0.02em;
-        }
-        .letter-spacing-widest {
-            letter-spacing: 0.2em;
-        }
-    </style>
-</head>
-<body class="bg-[#0A0A0A] text-on-surface font-body antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ALH Partners — Consultoría Estratégica de Marketing y Growth</title>
+<meta name="description" content="Consultoría estratégica de marketing, growth y branding para empresas listas para escalar. Estrategia, ejecución y resultados medibles."/>
+<meta property="og:title" content="ALH Partners — Marketing · Growth · Estrategia"/>
+<meta property="og:description" content="Construimos marcas que dominan mercados. Reserva una llamada estratégica gratuita."/>
+<meta property="og:type" content="website"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- TOP NAVIGATION BAR                          -->
-<!-- ═══════════════════════════════════════════ -->
-<nav class="fixed top-0 w-full z-50 bg-[#0E0E0E]/80 backdrop-blur-xl border-b border-[#4D4636]/20">
-    <div class="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1920px] mx-auto">
-        <a href="#" class="font-headline text-2xl font-serif text-white italic">
-            Alh Partners
-        </a>
-        <div class="hidden md:flex items-center space-x-10 font-label text-[0.75rem] uppercase tracking-[0.1em]">
-            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
-            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
-            <a class="text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
-            <a href="#calendly" class="bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none hover:opacity-90 transition-all duration-300 active:scale-95 inline-block">
-                Reservar llamada
-            </a>
-        </div>
-        <!-- Mobile Menu Icon -->
-        <button id="mobile-menu-btn" class="md:hidden">
-            <span class="material-symbols-outlined text-white">menu</span>
-        </button>
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════════ */
+:root{
+    --bg:            #080807;
+    --bg-2:          #0D0D0C;
+    --surface:       #121210;
+    --surface-2:     #181815;
+    --line:          rgba(255,255,255,.07);
+    --line-gold:     rgba(200,163,80,.28);
+    --gold:          #C8A350;
+    --gold-bright:   #E8C357;
+    --gold-deep:     #9A7B2E;
+    --ink:           #EDEAE3;
+    --ink-dim:       #A39E93;
+    --ink-faint:     #6B675E;
+    --font-display:  'Playfair Display', Georgia, serif;
+    --font-body:     'Inter', system-ui, sans-serif;
+    --ease-out:      cubic-bezier(.19,1,.22,1);
+    --ease-smooth:   cubic-bezier(.65,.05,0,1);
+    --nav-h:         76px;
+}
+
+/* ═══════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════ */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+}
+::selection{ background:var(--gold); color:#1a1403; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+body::after{ /* film grain */
+    content:''; position:fixed; inset:-50%; z-index:2000; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity:.035; animation:grain 8s steps(10) infinite;
+}
+@keyframes grain{
+    0%,100%{transform:translate(0,0)} 10%{transform:translate(-5%,-10%)} 20%{transform:translate(-15%,5%)}
+    30%{transform:translate(7%,-25%)} 40%{transform:translate(-5%,25%)} 50%{transform:translate(-15%,10%)}
+    60%{transform:translate(15%,0)} 70%{transform:translate(0,15%)} 80%{transform:translate(3%,35%)} 90%{transform:translate(-10%,10%)}
+}
+
+.container{ width:100%; max-width:1320px; margin:0 auto; padding:0 clamp(20px,4vw,48px); }
+
+/* Typography helpers */
+.kicker{
+    display:inline-flex; align-items:center; gap:14px;
+    font-size:11px; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);
+}
+.kicker::before{ content:''; width:32px; height:1px; background:var(--gold); }
+.display{
+    font-family:var(--font-display); font-weight:700; color:var(--ink);
+    line-height:1.06; letter-spacing:-.015em;
+}
+.display em{ font-style:italic; font-weight:500; color:var(--gold-bright); }
+.lede{ color:var(--ink-dim); font-size:clamp(16px,1.4vw,19px); line-height:1.75; font-weight:300; }
+
+/* Buttons */
+.btn{
+    position:relative; display:inline-flex; align-items:center; gap:14px;
+    padding:19px 36px; font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    border-radius:2px; overflow:hidden; white-space:nowrap;
+    transition:color .4s var(--ease-out);
+}
+.btn .arr{ transition:transform .4s var(--ease-out); font-size:14px; }
+.btn:hover .arr{ transform:translateX(6px); }
+.btn-gold{ background:var(--gold); color:#171203; }
+.btn-gold::before{
+    content:''; position:absolute; inset:0; background:var(--gold-bright);
+    transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease-smooth);
+}
+.btn-gold:hover::before{ transform:scaleX(1); }
+.btn-gold>*{ position:relative; z-index:1; }
+.btn-ghost{ border:1px solid var(--line-gold); color:var(--ink); }
+.btn-ghost::before{
+    content:''; position:absolute; inset:0; background:rgba(200,163,80,.08);
+    transform:scaleY(0); transform-origin:bottom; transition:transform .4s var(--ease-smooth);
+}
+.btn-ghost:hover::before{ transform:scaleY(1); }
+.btn-ghost>*{ position:relative; z-index:1; }
+.link-line{
+    position:relative; font-size:12px; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ink-dim); padding-bottom:6px; transition:color .3s;
+}
+.link-line::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:1px; background:var(--gold);
+    transform:scaleX(0); transform-origin:right; transition:transform .45s var(--ease-smooth);
+}
+.link-line:hover{ color:var(--ink); }
+.link-line:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+/* Scroll-reveal */
+.rv{ opacity:0; transform:translateY(36px); transition:opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.rv.in{ opacity:1; transform:none; }
+.rv-d1{ transition-delay:.1s } .rv-d2{ transition-delay:.2s } .rv-d3{ transition-delay:.3s } .rv-d4{ transition-delay:.4s }
+
+/* ═══════════════════════════════════════════
+   PRELOADER
+   ═══════════════════════════════════════════ */
+#loader{
+    position:fixed; inset:0; z-index:3000; background:var(--bg);
+    display:flex; align-items:center; justify-content:center;
+    transition:opacity .6s ease, visibility .6s;
+}
+#loader.done{ opacity:0; visibility:hidden; }
+#loader .mark{
+    font-family:var(--font-display); font-style:italic; font-size:clamp(28px,4vw,44px); color:var(--ink);
+    overflow:hidden; display:block;
+}
+#loader .mark span{ display:inline-block; animation:loadUp 1s var(--ease-out) both .15s; }
+#loader .bar{
+    width:120px; height:1px; background:var(--line); margin:22px auto 0; position:relative; overflow:hidden;
+}
+#loader .bar::after{
+    content:''; position:absolute; inset:0; background:var(--gold);
+    transform:scaleX(0); transform-origin:left; animation:loadBar 1s var(--ease-smooth) forwards .2s;
+}
+@keyframes loadUp{ from{ transform:translateY(110%);} to{ transform:translateY(0);} }
+@keyframes loadBar{ to{ transform:scaleX(1);} }
+
+/* ═══════════════════════════════════════════
+   CURSOR (desktop)
+   ═══════════════════════════════════════════ */
+#cursor-dot,#cursor-ring{ position:fixed; top:0; left:0; z-index:2500; pointer-events:none; border-radius:50%; }
+#cursor-dot{ width:5px; height:5px; background:var(--gold-bright); transform:translate(-50%,-50%); }
+#cursor-ring{
+    width:36px; height:36px; border:1px solid rgba(200,163,80,.45);
+    transform:translate(-50%,-50%); transition:width .3s,height .3s,border-color .3s,background .3s;
+}
+#cursor-ring.big{ width:64px; height:64px; background:rgba(200,163,80,.08); border-color:rgba(200,163,80,.7); }
+@media (hover:none), (pointer:coarse){ #cursor-dot,#cursor-ring{ display:none; } }
+
+/* ═══════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════ */
+#progress{
+    position:fixed; top:0; left:0; height:2px; width:100%; z-index:1001;
+    background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright));
+    transform-origin:left; transform:scaleX(0);
+}
+nav#topnav{
+    position:fixed; top:0; left:0; right:0; z-index:1000; height:var(--nav-h);
+    display:flex; align-items:center;
+    background:rgba(8,8,7,.72); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    transition:transform .5s var(--ease-out), background .4s;
+}
+nav#topnav.hide{ transform:translateY(-100%); }
+nav#topnav .inner{ display:flex; align-items:center; justify-content:space-between; width:100%; }
+.brand{ font-family:var(--font-display); font-style:italic; font-size:22px; color:var(--ink); letter-spacing:.01em; }
+.brand b{ color:var(--gold-bright); font-weight:700; }
+.nav-links{ display:flex; align-items:center; gap:38px; }
+.nav-links a:not(.btn){
+    position:relative; font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ink-dim); padding:6px 0; transition:color .3s;
+}
+.nav-links a:not(.btn)::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:1px; background:var(--gold);
+    transform:scaleX(0); transform-origin:right; transition:transform .4s var(--ease-smooth);
+}
+.nav-links a:not(.btn):hover, .nav-links a:not(.btn).active{ color:var(--ink); }
+.nav-links a:not(.btn):hover::after, .nav-links a:not(.btn).active::after{ transform:scaleX(1); transform-origin:left; }
+.nav-links .btn{ padding:13px 26px; }
+#burger{ display:none; flex-direction:column; gap:6px; padding:8px; z-index:1102; }
+#burger span{ width:26px; height:1.5px; background:var(--ink); transition:transform .4s var(--ease-out), opacity .3s; }
+#burger.open span:nth-child(1){ transform:translateY(7.5px) rotate(45deg); }
+#burger.open span:nth-child(2){ opacity:0; }
+#burger.open span:nth-child(3){ transform:translateY(-7.5px) rotate(-45deg); }
+
+/* Mobile overlay menu */
+#mobile-menu{
+    position:fixed; inset:0; z-index:1100; background:var(--bg);
+    display:flex; flex-direction:column; justify-content:center; padding:0 clamp(24px,8vw,64px);
+    clip-path:inset(0 0 100% 0); transition:clip-path .7s var(--ease-smooth);
+}
+#mobile-menu.open{ clip-path:inset(0 0 0% 0); }
+#mobile-menu a.mlink{
+    font-family:var(--font-display); font-size:clamp(34px,9vw,56px); color:var(--ink);
+    padding:14px 0; border-bottom:1px solid var(--line); display:flex; align-items:baseline; gap:18px;
+    opacity:0; transform:translateY(24px); transition:opacity .5s var(--ease-out), transform .5s var(--ease-out), color .3s;
+}
+#mobile-menu.open a.mlink{ opacity:1; transform:none; }
+#mobile-menu a.mlink:nth-child(2){transition-delay:.1s} #mobile-menu a.mlink:nth-child(3){transition-delay:.17s}
+#mobile-menu a.mlink:nth-child(4){transition-delay:.24s} #mobile-menu a.mlink:nth-child(5){transition-delay:.31s}
+#mobile-menu a.mlink:hover{ color:var(--gold-bright); }
+#mobile-menu a.mlink small{ font-family:var(--font-body); font-size:11px; letter-spacing:.2em; color:var(--gold); }
+#mobile-menu .mm-cta{ margin-top:40px; opacity:0; transition:opacity .5s .4s; }
+#mobile-menu.open .mm-cta{ opacity:1; }
+
+@media (max-width:900px){
+    .nav-links{ display:none; }
+    #burger{ display:flex; }
+}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+#hero{
+    position:relative; min-height:100svh; display:flex; flex-direction:column;
+    padding-top:var(--nav-h); overflow:hidden;
+}
+#hero .glow{
+    position:absolute; width:900px; height:900px; border-radius:50%; pointer-events:none;
+    background:radial-gradient(circle, rgba(200,163,80,.13) 0%, transparent 62%);
+    top:-280px; right:-220px; animation:pulse 9s ease-in-out infinite;
+}
+@keyframes pulse{ 0%,100%{opacity:.8; transform:scale(1)} 50%{opacity:1; transform:scale(1.12)} }
+#hero .gridlines{
+    position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:linear-gradient(to right, var(--line) 1px, transparent 1px);
+    background-size:25% 100%; background-position:center;
+    mask-image:linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
+    -webkit-mask-image:linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
+}
+#hero .hero-main{
+    flex:1; display:flex; flex-direction:column; justify-content:center;
+    position:relative; z-index:2; padding-top:80px; padding-bottom:60px;
+}
+.hero-kicker{ margin-bottom:34px; }
+.hero-h1{ font-size:clamp(44px,7.2vw,102px); max-width:14ch; }
+.hero-h1 .ln{ display:block; overflow:hidden; }
+.hero-h1 .ln>span{ display:block; transform:translateY(115%); transition:transform 1.1s var(--ease-out); }
+body.loaded .hero-h1 .ln>span{ transform:translateY(0); }
+body.loaded .hero-h1 .ln:nth-child(2)>span{ transition-delay:.12s; }
+body.loaded .hero-h1 .ln:nth-child(3)>span{ transition-delay:.24s; }
+.hero-sub{ margin:32px 0 44px; max-width:52ch; }
+.hero-ctas{ display:flex; flex-wrap:wrap; align-items:center; gap:36px; }
+.hero-foot{
+    position:relative; z-index:2; border-top:1px solid var(--line-gold);
+}
+.hero-stats{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+    padding-top:44px; padding-bottom:44px;
+}
+.stat .num{
+    font-family:var(--font-display); font-size:clamp(34px,3.6vw,52px); font-weight:700; color:var(--ink);
+    line-height:1; display:flex; align-items:baseline;
+}
+.stat .num .suf{ color:var(--gold-bright); margin-left:2px; }
+.stat .lbl{ margin-top:10px; font-size:10px; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-faint); }
+.scroll-hint{
+    position:absolute; bottom:150px; right:clamp(20px,4vw,48px); z-index:3;
+    display:flex; flex-direction:column; align-items:center; gap:12px;
+    font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-faint);
+    writing-mode:vertical-rl;
+}
+.scroll-hint::after{
+    content:''; width:1px; height:56px; background:linear-gradient(to bottom, var(--gold), transparent);
+    animation:drip 2.2s var(--ease-smooth) infinite;
+}
+@keyframes drip{ 0%{transform:scaleY(0); transform-origin:top} 45%{transform:scaleY(1); transform-origin:top} 55%{transform:scaleY(1); transform-origin:bottom} 100%{transform:scaleY(0); transform-origin:bottom} }
+@media (max-width:900px){
+    .hero-stats{ grid-template-columns:1fr; gap:26px; padding-top:36px; padding-bottom:36px; }
+    .scroll-hint{ display:none; }
+}
+@media (max-width:480px){
+    .btn{ padding:16px 22px; font-size:11px; letter-spacing:.12em; gap:10px; }
+}
+
+/* ═══════════════════════════════════════════
+   MARQUEE
+   ═══════════════════════════════════════════ */
+.marquee{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    overflow:hidden; padding:26px 0; background:var(--bg-2);
+}
+.marquee .track{ display:flex; width:max-content; animation:scrollX 30s linear infinite; }
+.marquee:hover .track{ animation-play-state:paused; }
+.marquee .item{
+    display:flex; align-items:center; gap:44px; padding-right:44px;
+    font-family:var(--font-display); font-style:italic; font-size:clamp(18px,2vw,26px); color:var(--ink-faint);
+    white-space:nowrap;
+}
+.marquee .item i{ font-style:normal; color:var(--gold); font-size:12px; }
+@keyframes scrollX{ to{ transform:translateX(-50%); } }
+
+/* ═══════════════════════════════════════════
+   SECTION SCAFFOLDING
+   ═══════════════════════════════════════════ */
+section{ position:relative; }
+.sec-pad{ padding:clamp(90px,11vw,150px) 0; }
+.sec-head{ margin-bottom:clamp(52px,7vw,90px); }
+.sec-head h2{ font-size:clamp(34px,5vw,66px); max-width:20ch; margin-top:26px; }
+.sec-index{
+    position:absolute; top:clamp(90px,11vw,150px); right:clamp(20px,4vw,48px);
+    font-family:var(--font-display); font-style:italic; font-size:15px; color:var(--ink-faint);
+}
+.sec-index b{ color:var(--gold); font-weight:500; }
+
+/* ═══════════════════════════════════════════
+   MANIFIESTO
+   ═══════════════════════════════════════════ */
+#manifiesto{ background:var(--bg); }
+.manifest-quote{
+    font-family:var(--font-display); font-weight:500; font-size:clamp(26px,3.6vw,46px);
+    line-height:1.35; max-width:24ch; color:var(--ink-faint);
+}
+.manifest-quote .w{ transition:color .5s ease; }
+.manifest-quote .w.lit{ color:var(--ink); }
+.manifest-quote .w.gold.lit{ color:var(--gold-bright); font-style:italic; }
+.manifest-meta{
+    margin-top:44px; display:flex; align-items:center; gap:18px;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-faint);
+}
+.manifest-meta::before{ content:''; width:44px; height:1px; background:var(--gold); }
+
+/* ═══════════════════════════════════════════
+   SERVICIOS (accordion rows)
+   ═══════════════════════════════════════════ */
+#servicios{ background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.svc{ border-top:1px solid var(--line); }
+.svc:last-child{ border-bottom:1px solid var(--line); }
+.svc-row{
+    width:100%; display:grid; grid-template-columns:90px 1fr auto; align-items:center; gap:28px;
+    padding:38px 0; text-align:left; position:relative; transition:padding .45s var(--ease-smooth);
+}
+.svc-row:hover{ padding-left:14px; }
+.svc-num{
+    font-family:var(--font-display); font-style:italic; font-size:26px; color:var(--ink-faint);
+    transition:color .4s;
+}
+.svc.open .svc-num, .svc-row:hover .svc-num{ color:var(--gold-bright); }
+.svc-title{
+    font-family:var(--font-display); font-weight:600; font-size:clamp(22px,3.2vw,38px); color:var(--ink);
+    line-height:1.15; transition:transform .45s var(--ease-smooth);
+}
+.svc-plus{
+    width:44px; height:44px; border:1px solid var(--line-gold); border-radius:50%;
+    display:grid; place-items:center; position:relative; flex-shrink:0;
+    transition:background .4s, transform .5s var(--ease-smooth);
+}
+.svc-plus::before,.svc-plus::after{
+    content:''; position:absolute; background:var(--gold-bright); transition:transform .4s var(--ease-smooth);
+}
+.svc-plus::before{ width:14px; height:1.5px; }
+.svc-plus::after{ width:1.5px; height:14px; }
+.svc.open .svc-plus{ background:rgba(200,163,80,.12); transform:rotate(180deg); }
+.svc.open .svc-plus::after{ transform:scaleY(0); }
+.svc-body{
+    display:grid; grid-template-rows:0fr; transition:grid-template-rows .6s var(--ease-smooth);
+}
+.svc.open .svc-body{ grid-template-rows:1fr; }
+.svc-body-in{ overflow:hidden; }
+.svc-detail{
+    display:grid; grid-template-columns:90px 1fr 1fr; gap:28px; padding:0 0 48px;
+}
+.svc-detail p{ color:var(--ink-dim); font-size:15px; line-height:1.8; max-width:46ch; grid-column:2; }
+.svc-tags{ display:flex; flex-wrap:wrap; gap:10px; align-content:start; justify-content:flex-end; }
+.svc-tags span{
+    font-size:10px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--gold);
+    border:1px solid var(--line-gold); padding:8px 14px; border-radius:999px;
+}
+@media (max-width:800px){
+    .svc-row{ grid-template-columns:48px 1fr auto; gap:16px; padding:28px 0; }
+    .svc-num{ font-size:18px; }
+    .svc-plus{ width:36px; height:36px; }
+    .svc-detail{ grid-template-columns:1fr; gap:22px; padding-bottom:36px; }
+    .svc-detail p{ grid-column:1; }
+    .svc-tags{ justify-content:flex-start; }
+}
+
+/* ═══════════════════════════════════════════
+   PROCESO
+   ═══════════════════════════════════════════ */
+.steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.step{
+    background:var(--bg); padding:clamp(30px,3.4vw,48px); position:relative; overflow:hidden;
+    transition:background .5s;
+}
+.step::before{ /* mouse-follow glow */
+    content:''; position:absolute; inset:0; opacity:0; transition:opacity .5s; pointer-events:none;
+    background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%), rgba(200,163,80,.09), transparent 65%);
+}
+.step:hover::before{ opacity:1; }
+.step .s-num{
+    font-family:var(--font-display); font-style:italic; font-size:15px; color:var(--gold);
+    display:block; margin-bottom:64px;
+}
+.step h3{ font-family:var(--font-display); font-weight:600; font-size:22px; margin-bottom:14px; }
+.step p{ color:var(--ink-dim); font-size:14px; line-height:1.75; }
+.step .s-line{
+    position:absolute; bottom:0; left:0; height:2px; width:100%; background:var(--gold);
+    transform:scaleX(0); transform-origin:left; transition:transform .6s var(--ease-smooth);
+}
+.step:hover .s-line{ transform:scaleX(1); }
+@media (max-width:1000px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .steps{ grid-template-columns:1fr; } .step .s-num{ margin-bottom:32px; } }
+
+/* ═══════════════════════════════════════════
+   NOSOTROS
+   ═══════════════════════════════════════════ */
+#nosotros{ background:var(--bg-2); border-top:1px solid var(--line); }
+.about-grid{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(48px,6vw,96px); align-items:start; }
+.about-copy p+p{ margin-top:22px; }
+.about-values{ margin-top:48px; display:grid; gap:0; }
+.value{
+    display:flex; align-items:baseline; gap:20px; padding:20px 0; border-top:1px solid var(--line);
+}
+.value i{ font-style:italic; font-family:var(--font-display); color:var(--gold); font-size:15px; min-width:34px; }
+.value div b{ display:block; font-weight:600; font-size:15px; color:var(--ink); margin-bottom:4px; }
+.value div span{ font-size:13.5px; color:var(--ink-dim); }
+.metric-card{
+    position:sticky; top:calc(var(--nav-h) + 32px);
+    background:var(--surface); border:1px solid var(--line); border-top:2px solid var(--gold);
+    padding:clamp(34px,3.6vw,56px);
+}
+.metric{ padding:28px 0; }
+.metric+.metric{ border-top:1px solid var(--line); }
+.metric .num{
+    font-family:var(--font-display); font-size:clamp(46px,4.6vw,68px); font-weight:700; line-height:1;
+    display:flex; align-items:baseline;
+}
+.metric .num .suf{ color:var(--gold-bright); }
+.metric .lbl{ margin-top:12px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
+.metric .note{ margin-top:6px; font-size:13px; color:var(--ink-faint); }
+@media (max-width:960px){ .about-grid{ grid-template-columns:1fr; } .metric-card{ position:static; } }
+
+/* ═══════════════════════════════════════════
+   TESTIMONIOS
+   ═══════════════════════════════════════════ */
+#testimonios{ border-top:1px solid var(--line); overflow:hidden; }
+.t-viewport{ overflow:hidden; }
+.t-track{ display:flex; transition:transform .8s var(--ease-smooth); }
+.t-slide{ min-width:100%; padding:0 2px; }
+.t-quote{
+    font-family:var(--font-display); font-weight:500; font-size:clamp(22px,3vw,36px); line-height:1.45;
+    max-width:30ch; color:var(--ink);
+}
+.t-quote::before{ content:'“'; color:var(--gold-bright); }
+.t-quote::after{ content:'”'; color:var(--gold-bright); }
+.t-who{ margin-top:36px; display:flex; align-items:center; gap:16px; }
+.t-who .ava{
+    width:46px; height:46px; border-radius:50%; border:1px solid var(--line-gold);
+    display:grid; place-items:center; font-family:var(--font-display); font-style:italic; color:var(--gold-bright); font-size:16px;
+    background:rgba(200,163,80,.07);
+}
+.t-who b{ display:block; font-size:14px; font-weight:600; color:var(--ink); }
+.t-who span{ font-size:12px; color:var(--ink-faint); letter-spacing:.08em; text-transform:uppercase; }
+.t-nav{ margin-top:52px; display:flex; align-items:center; gap:26px; }
+.t-arrows{ display:flex; gap:12px; }
+.t-btn{
+    width:52px; height:52px; border:1px solid var(--line-gold); border-radius:50%;
+    display:grid; place-items:center; color:var(--gold-bright); font-size:18px;
+    transition:background .35s, transform .35s;
+}
+.t-btn:hover{ background:rgba(200,163,80,.12); transform:scale(1.06); }
+.t-dots{ display:flex; gap:10px; }
+.t-dot{ width:28px; height:2px; background:var(--line); transition:background .4s; }
+.t-dot.on{ background:var(--gold-bright); }
+.t-count{ margin-left:auto; font-family:var(--font-display); font-style:italic; font-size:15px; color:var(--ink-faint); }
+.t-count b{ color:var(--gold-bright); font-weight:500; }
+
+/* ═══════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════ */
+#faq{ background:var(--bg-2); border-top:1px solid var(--line); }
+.faq-grid{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(44px,6vw,90px); }
+.faq-item{ border-bottom:1px solid var(--line); }
+.faq-item:first-child{ border-top:1px solid var(--line); }
+.faq-q{
+    width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px;
+    padding:26px 0; text-align:left; font-size:16.5px; font-weight:500; color:var(--ink);
+    transition:color .3s;
+}
+.faq-q:hover{ color:var(--gold-bright); }
+.faq-q .ico{
+    font-family:var(--font-display); font-style:italic; color:var(--gold); font-size:20px; flex-shrink:0;
+    transition:transform .45s var(--ease-smooth);
+}
+.faq-item.open .faq-q .ico{ transform:rotate(45deg); }
+.faq-a{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .5s var(--ease-smooth); }
+.faq-item.open .faq-a{ grid-template-rows:1fr; }
+.faq-a-in{ overflow:hidden; }
+.faq-a p{ padding:0 44px 26px 0; color:var(--ink-dim); font-size:14.5px; line-height:1.8; }
+@media (max-width:900px){ .faq-grid{ grid-template-columns:1fr; } }
+
+/* ═══════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════ */
+#cta{ text-align:center; overflow:hidden; border-top:1px solid var(--line); }
+#cta .glow{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:820px; height:820px; border-radius:50%; pointer-events:none;
+    background:radial-gradient(circle, rgba(200,163,80,.10) 0%, transparent 62%);
+}
+#cta .ring{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    border:1px solid rgba(200,163,80,.14); border-radius:50%; pointer-events:none;
+}
+#cta .r1{ width:560px; height:560px; animation:spin 40s linear infinite; border-style:dashed; }
+#cta .r2{ width:780px; height:780px; }
+@keyframes spin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
+#cta .inner{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; }
+#cta h2{ font-size:clamp(40px,6.5vw,88px); max-width:15ch; margin:26px 0 24px; }
+#cta .lede{ max-width:44ch; margin-bottom:48px; }
+#cta .assure{ margin-top:30px; font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-faint); }
+
+/* ═══════════════════════════════════════════
+   CALENDLY
+   ═══════════════════════════════════════════ */
+#calendly{ border-top:1px solid var(--line); background:var(--bg-2); }
+#calendly .cal-head{ text-align:center; max-width:640px; margin:0 auto clamp(40px,5vw,64px); }
+#calendly .cal-head h2{ font-size:clamp(32px,4.6vw,56px); margin:24px 0 18px; }
+.cal-frame{
+    max-width:960px; margin:0 auto; border:1px solid var(--line); border-top:2px solid var(--gold);
+    background:var(--surface); padding:10px;
+}
+
+/* ═══════════════════════════════════════════
+   CONTACTO
+   ═══════════════════════════════════════════ */
+#contacto{ border-top:1px solid var(--line); }
+.contact-grid{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:clamp(48px,7vw,110px); }
+.c-item{ padding:22px 0; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:6px; }
+.c-item:first-of-type{ border-top:1px solid var(--line); margin-top:44px; }
+.c-item small{ font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-faint); }
+.c-item a, .c-item span.v{ font-size:18px; font-weight:300; color:var(--ink-dim); transition:color .3s; width:fit-content; }
+.c-item a:hover{ color:var(--gold-bright); }
+
+.field{ position:relative; margin-bottom:38px; }
+.field input,.field textarea{
+    width:100%; background:transparent; border:0; border-bottom:1px solid var(--line);
+    padding:16px 0 14px; font:inherit; font-size:16px; color:var(--ink); resize:none;
+    transition:border-color .4s;
+}
+.field input:focus,.field textarea:focus{ outline:none; border-color:var(--gold); }
+.field label{
+    position:absolute; left:0; top:16px; color:var(--ink-faint); font-size:15px; pointer-events:none;
+    transition:all .35s var(--ease-out);
+}
+.field input:focus~label, .field textarea:focus~label,
+.field input:not(:placeholder-shown)~label, .field textarea:not(:placeholder-shown)~label{
+    top:-10px; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold);
+}
+.field .fline{
+    position:absolute; bottom:0; left:0; width:100%; height:1px; background:var(--gold-bright);
+    transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease-smooth);
+}
+.field input:focus~.fline, .field textarea:focus~.fline{ transform:scaleX(1); }
+#form-ok{
+    display:none; margin-top:22px; padding:16px 20px; border:1px solid var(--line-gold);
+    background:rgba(200,163,80,.07); color:var(--gold-bright); font-size:13.5px; letter-spacing:.04em;
+}
+#form-ok.show{ display:block; }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+footer{ border-top:1px solid var(--line-gold); background:var(--bg-2); overflow:hidden; }
+.foot-word{
+    font-family:var(--font-display); font-style:italic; font-weight:700; text-align:center;
+    font-size:clamp(56px,13vw,190px); line-height:1.1; padding:clamp(40px,6vw,80px) 0 0;
+    color:transparent; -webkit-text-stroke:1px rgba(200,163,80,.35);
+    user-select:none; white-space:nowrap;
+}
+.foot-grid{
+    display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px;
+    padding:clamp(48px,6vw,80px) 0 56px;
+}
+.foot-grid h4{ font-size:10px; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:20px; }
+.foot-grid ul{ list-style:none; display:flex; flex-direction:column; gap:12px; }
+.foot-grid ul a{ font-size:13px; color:var(--ink-dim); transition:color .3s, padding-left .3s; }
+.foot-grid ul a:hover{ color:var(--gold-bright); padding-left:6px; }
+.foot-brand p{ color:var(--ink-dim); font-size:13.5px; max-width:30ch; line-height:1.7; margin-top:14px; }
+.foot-clock{ margin-top:26px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); }
+.foot-clock b{ color:var(--gold-bright); font-weight:500; font-variant-numeric:tabular-nums; }
+.foot-bottom{
+    border-top:1px solid var(--line); padding:26px 0;
+    display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+    font-size:11px; letter-spacing:.12em; color:var(--ink-faint);
+}
+@media (max-width:900px){ .foot-grid{ grid-template-columns:1fr 1fr; } .foot-brand{ grid-column:1/-1; } }
+
+/* Back to top */
+#toTop{
+    position:fixed; right:26px; bottom:26px; z-index:900;
+    width:52px; height:52px; border-radius:50%; border:1px solid var(--line-gold);
+    background:rgba(8,8,7,.8); backdrop-filter:blur(8px); color:var(--gold-bright); font-size:18px;
+    display:grid; place-items:center;
+    opacity:0; visibility:hidden; transform:translateY(14px);
+    transition:opacity .4s, transform .4s, visibility .4s, background .3s;
+}
+#toTop.show{ opacity:1; visibility:visible; transform:none; }
+#toTop:hover{ background:rgba(200,163,80,.15); }
+
+/* ═══════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════ */
+@media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{ animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+    html{ scroll-behavior:auto; }
+    .rv{ opacity:1; transform:none; }
+    .hero-h1 .ln>span{ transform:none; }
+    body::after{ display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="loader" aria-hidden="true">
+    <div style="text-align:center">
+        <span class="mark"><span>Alh <b style="color:var(--gold-bright)">Partners</b></span></span>
+        <div class="bar"></div>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 space-y-4 font-label text-[0.75rem] uppercase tracking-[0.1em]">
-        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
-        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#nosotros">Sobre nosotros</a>
-        <a class="block text-[#A0A0A0] hover:text-white transition-colors duration-300" href="#contacto">Contacto</a>
-        <a href="#calendly" class="block bg-[#B8962E] text-white px-6 py-2 font-bold rounded-none text-center">
-            Reservar llamada
-        </a>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════ -->
+<nav id="topnav">
+    <div class="container inner">
+        <a href="#hero" class="brand">Alh <b>Partners</b></a>
+        <div class="nav-links">
+            <a href="#servicios" data-spy="servicios">Servicios</a>
+            <a href="#proceso" data-spy="proceso">Método</a>
+            <a href="#nosotros" data-spy="nosotros">Nosotros</a>
+            <a href="#faq" data-spy="faq">FAQ</a>
+            <a href="#contacto" data-spy="contacto">Contacto</a>
+            <a href="#calendly" class="btn btn-gold"><span>Reservar llamada</span></a>
+        </div>
+        <button id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- HERO SECTION                                -->
-<!-- ═══════════════════════════════════════════ -->
-<main class="relative min-h-screen flex flex-col justify-center bg-[#0A0A0A] overflow-hidden" id="hero">
-    <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-[120px]">
-        <div class="max-w-4xl">
-            <!-- Main Headline -->
-            <h1 class="font-headline text-5xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.05] tracking-tight mb-10">
-                Construimos marcas que dominan mercados.
-            </h1>
-            <!-- Subheadline -->
-            <p class="font-body text-[#A0A0A0] text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
-                Consultoría estratégica de marketing y crecimiento para empresas listas para escalar.
-            </p>
-            <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-10">
-                <a href="#calendly" class="group px-8 py-5 bg-[#B8962E] text-white font-bold text-sm tracking-wide uppercase rounded-[2px] transition-all duration-300 hover:brightness-110 flex items-center">
-                    Reservar llamada gratuita
-                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-                <a class="font-label text-[#A0A0A0] hover:text-white transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#servicios">
-                    Ver nuestros servicios
-                </a>
-            </div>
-        </div>
+<!-- MOBILE MENU -->
+<div id="mobile-menu" aria-hidden="true">
+    <a class="mlink" href="#servicios"><small>01</small> Servicios</a>
+    <a class="mlink" href="#proceso"><small>02</small> Método</a>
+    <a class="mlink" href="#nosotros"><small>03</small> Nosotros</a>
+    <a class="mlink" href="#faq"><small>04</small> FAQ</a>
+    <a class="mlink" href="#contacto"><small>05</small> Contacto</a>
+    <div class="mm-cta">
+        <a href="#calendly" class="btn btn-gold"><span>Reservar llamada gratuita</span><span class="arr">→</span></a>
     </div>
-    <!-- Footer Stats Section -->
-    <div class="mt-auto w-full">
-        <!-- Signature Divider -->
-        <div class="w-full h-[1px] bg-[#B8962E]/40"></div>
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-                <div class="space-y-1">
-                    <p class="font-body text-white text-3xl font-bold tracking-tight">50+</p>
-                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">CLIENTES ATENDIDOS</p>
-                </div>
-                <div class="space-y-1">
-                    <p class="font-body text-white text-3xl font-bold tracking-tight">4</p>
-                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">ÁREAS DE SERVICIO</p>
-                </div>
-                <div class="space-y-1">
-                    <p class="font-body text-white text-3xl font-bold tracking-tight">100%</p>
-                    <p class="font-label text-[#A0A0A0] text-[10px] tracking-[0.2em] uppercase">ENFOQUE EN RESULTADOS</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+</div>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- GALLERY SECTION                             -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="bg-surface py-24 px-6 md:px-12">
-    <div class="max-w-screen-2xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div class="md:col-span-8 h-[500px] relative overflow-hidden group">
-                <img alt="Premium Office" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnrNcrjfZuQJ4Ddr8dqw2DqzhNRQ0BuQSzvo3kO1eOPIDYZ7VJ9bLomTzq_fpTyM702sZ_BYUfwRKCqiZpV2f0UvE_3G0lcxUm6lckajuiGmZUfhQEbOCAvYI1D_unn4S8TVehdUvieTyujdNewPV8lpvZCWUe2qH8mow2C3IoQX3-IQgzAtyn45LHqSjZko0oQOmnjOOZWXVZuYuhddhOuyzPvRKd1n19PiIyaYfjXtMFGO2CotTPH1OyWxPpoHZraYdYCp8hAyE"/>
-                <div class="absolute inset-0 bg-surface-container-lowest/40 group-hover:bg-transparent transition-colors duration-700"></div>
-            </div>
-            <div class="md:col-span-4 h-[500px] bg-surface-container-high p-12 flex flex-col justify-end border-l border-primary-container/20">
-                <span class="material-symbols-outlined text-primary-container text-4xl mb-6" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">workspace_premium</span>
-                <h3 class="font-headline text-3xl mb-4 text-white">Excelencia Ejecutiva</h3>
-                <p class="text-[#A0A0A0] leading-relaxed">No solo asesoramos. Transformamos la percepción de valor de su empresa en el mercado global.</p>
-            </div>
+<!-- ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ -->
+<header id="hero">
+    <div class="glow"></div>
+    <div class="gridlines"></div>
+    <div class="container hero-main">
+        <p class="kicker hero-kicker">Consultoría estratégica · Marketing &amp; Growth</p>
+        <h1 class="display hero-h1">
+            <span class="ln"><span>Construimos marcas</span></span>
+            <span class="ln"><span>que <em>dominan</em></span></span>
+            <span class="ln"><span>mercados.</span></span>
+        </h1>
+        <p class="lede hero-sub rv rv-d3">Estrategia, creatividad y datos al servicio de un único objetivo: hacer crecer su negocio de forma medible y sostenida.</p>
+        <div class="hero-ctas rv rv-d4">
+            <a href="#calendly" class="btn btn-gold" data-magnetic><span>Reservar llamada gratuita</span><span class="arr">→</span></a>
+            <a href="#servicios" class="link-line">Ver nuestros servicios</a>
         </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+    <div class="hero-foot">
+        <div class="container hero-stats">
+            <div class="stat rv"><div class="num"><span data-count="50">0</span><span class="suf">+</span></div><div class="lbl">Clientes atendidos</div></div>
+            <div class="stat rv rv-d1"><div class="num"><span data-count="4">0</span></div><div class="lbl">Áreas de servicio</div></div>
+            <div class="stat rv rv-d2"><div class="num"><span data-count="100">0</span><span class="suf">%</span></div><div class="lbl">Enfoque en resultados</div></div>
+        </div>
+    </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+    <div class="track">
+        <div class="item">Estrategia <i>◆</i> Paid Media <i>◆</i> Growth <i>◆</i> Branding <i>◆</i> Ventas <i>◆</i> Posicionamiento <i>◆</i> Analítica <i>◆</i> Creatividad <i>◆</i></div>
+        <div class="item">Estrategia <i>◆</i> Paid Media <i>◆</i> Growth <i>◆</i> Branding <i>◆</i> Ventas <i>◆</i> Posicionamiento <i>◆</i> Analítica <i>◆</i> Creatividad <i>◆</i></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MANIFIESTO
+     ═══════════════════════════════════════════ -->
+<section id="manifiesto" class="sec-pad">
+    <span class="sec-index"><b>01</b> / 06</span>
+    <div class="container">
+        <p class="kicker rv">Nuestra filosofía</p>
+        <p class="manifest-quote" id="mquote" style="margin-top:36px">
+            No vendemos servicios. Construimos <span data-gold>resultados</span> que se pueden medir, repetir y <span data-gold>escalar</span>.
+        </p>
+        <div class="manifest-meta rv">Alh Partners — Manifiesto</div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- SERVICIOS SECTION                           -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="py-[120px] bg-[#111111]" id="servicios">
-    <div class="max-w-7xl mx-auto px-6 md:px-12">
-        <!-- Section Header -->
-        <header class="mb-24">
-            <p class="text-[#B8962E] font-label font-bold text-[0.75rem] uppercase tracking-[0.2em] mb-6">QUÉ HACEMOS</p>
-            <h2 class="serif-display text-4xl md:text-[4.5rem] leading-[1.1] text-white max-w-3xl font-black">Cuatro vías para hacer crecer su negocio.</h2>
+<!-- ═══════════════════════════════════════════
+     SERVICIOS
+     ═══════════════════════════════════════════ -->
+<section id="servicios" class="sec-pad">
+    <span class="sec-index"><b>02</b> / 06</span>
+    <div class="container">
+        <header class="sec-head">
+            <p class="kicker rv">Qué hacemos</p>
+            <h2 class="display rv rv-d1">Cuatro vías para hacer <em>crecer</em> su negocio.</h2>
         </header>
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#2A2A2A] border border-[#2A2A2A] rounded-[2px] overflow-hidden">
-            <!-- Card I -->
-            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
-                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">I.</div>
-                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Marketing Digital y Medios Pagados</h3>
-                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Ejecutamos campañas de alto rendimiento en Google, Meta y más allá, centradas en el ROI, no en métricas de vanidad.</p>
-            </div>
-            <!-- Card II -->
-            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
-                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">II.</div>
-                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Crecimiento y Ventas</h3>
-                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Mapeamos y optimizamos todo su embudo de ventas, convirtiendo prospectos fríos en clientes leales.</p>
-            </div>
-            <!-- Card III -->
-            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
-                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">III.</div>
-                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Consultoría Estratégica</h3>
-                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Antes de actuar, pensamos. Diagnosticamos su negocio y diseñamos una estrategia para superar a su competencia.</p>
-            </div>
-            <!-- Card IV -->
-            <div class="bg-[#1C1C1C] p-10 md:p-20 group relative transition-colors duration-500 cursor-default">
-                <div class="text-[#B8962E] font-headline text-4xl font-bold mb-8 italic">IV.</div>
-                <h3 class="text-white font-body font-bold text-[1.25rem] mb-4">Branding e Identidad</h3>
-                <p class="text-[#A0A0A0] font-body text-[0.875rem] leading-relaxed max-w-sm">Su marca es su primera impresión. Creamos identidades visuales que captan la atención y generan confianza.</p>
-            </div>
-        </div>
-        <!-- Footer Line -->
-        <div class="mt-24 w-full h-px bg-[#B8962E]/30"></div>
-    </div>
-</section>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- SOBRE NOSOTROS SECTION                      -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="bg-[#0A0A0A] py-[120px] px-6 md:px-12 lg:px-24" id="nosotros">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-16 items-start">
-        <!-- Left Column (60%) -->
-        <div class="lg:col-span-6 space-y-10">
-            <div class="space-y-4">
-                <span class="text-primary font-label text-[0.75rem] uppercase tracking-[0.2em] font-bold">QUIÉNES SOMOS</span>
-                <h2 class="serif-display text-5xl md:text-8xl text-white leading-tight">
-                    Una agencia diferente.
-                </h2>
-            </div>
-            <div class="space-y-8 max-w-2xl">
-                <p class="font-body text-[15px] leading-relaxed text-[#A0A0A0]">
-                    En Alh Partners no vendemos servicios — construimos resultados. Trabajamos con pequeñas empresas y emprendedores que quieren crecer de verdad, no solo tener una web bonita.
-                </p>
-                <p class="font-body text-[15px] leading-relaxed text-[#A0A0A0]">
-                    Combinamos estrategia, creatividad y datos para crear sistemas de marketing que funcionan a largo plazo. Sin humo, sin promesas vacías.
-                </p>
-            </div>
-            <!-- Signature Divider -->
-            <div class="w-24 h-[1px] bg-primary-container"></div>
-        </div>
-        <!-- Right Column (40%) -->
-        <div class="lg:col-span-4">
-            <div class="bg-[#1C1C1C] border border-[#2A2A2A] rounded-[2px] p-10 md:p-14 shadow-2xl">
-                <div class="flex flex-col gap-12">
-                    <!-- Metric 1 -->
-                    <div class="space-y-3">
-                        <div class="serif-display text-[56px] leading-none text-white">50+</div>
-                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">CLIENTES ATENDIDOS</div>
+        <div class="svc-list">
+            <div class="svc rv">
+                <button class="svc-row" aria-expanded="false">
+                    <span class="svc-num">I.</span>
+                    <span class="svc-title">Marketing Digital y Medios Pagados</span>
+                    <span class="svc-plus" aria-hidden="true"></span>
+                </button>
+                <div class="svc-body"><div class="svc-body-in">
+                    <div class="svc-detail">
+                        <span></span>
+                        <p>Ejecutamos campañas de alto rendimiento en Google, Meta y más allá, centradas en el ROI, no en métricas de vanidad. Diseñamos la estructura de cuentas, los creativos y la medición para que cada euro invertido sea trazable.</p>
+                        <div class="svc-tags"><span>Google Ads</span><span>Meta Ads</span><span>Retargeting</span><span>Atribución</span></div>
                     </div>
-                    <hr class="border-[#2A2A2A]"/>
-                    <!-- Metric 2 -->
-                    <div class="space-y-3">
-                        <div class="serif-display text-[56px] leading-none text-white">4</div>
-                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">ÁREAS DE SERVICIO</div>
+                </div></div>
+            </div>
+
+            <div class="svc rv">
+                <button class="svc-row" aria-expanded="false">
+                    <span class="svc-num">II.</span>
+                    <span class="svc-title">Crecimiento y Ventas</span>
+                    <span class="svc-plus" aria-hidden="true"></span>
+                </button>
+                <div class="svc-body"><div class="svc-body-in">
+                    <div class="svc-detail">
+                        <span></span>
+                        <p>Mapeamos y optimizamos todo su embudo de ventas, convirtiendo prospectos fríos en clientes leales. Automatización, CRO y sistemas de seguimiento que trabajan mientras usted duerme.</p>
+                        <div class="svc-tags"><span>Funnels</span><span>CRO</span><span>Email</span><span>Automatización</span></div>
                     </div>
-                    <hr class="border-[#2A2A2A]"/>
-                    <!-- Metric 3 -->
-                    <div class="space-y-3">
-                        <div class="serif-display text-[56px] leading-none text-white">100%</div>
-                        <div class="text-primary font-label text-[0.7rem] uppercase tracking-[0.15em] font-semibold">ENFOQUE EN RESULTADOS</div>
+                </div></div>
+            </div>
+
+            <div class="svc rv">
+                <button class="svc-row" aria-expanded="false">
+                    <span class="svc-num">III.</span>
+                    <span class="svc-title">Consultoría Estratégica</span>
+                    <span class="svc-plus" aria-hidden="true"></span>
+                </button>
+                <div class="svc-body"><div class="svc-body-in">
+                    <div class="svc-detail">
+                        <span></span>
+                        <p>Antes de actuar, pensamos. Diagnosticamos su negocio, su mercado y su competencia, y diseñamos una hoja de ruta clara con prioridades, plazos y métricas de éxito.</p>
+                        <div class="svc-tags"><span>Diagnóstico</span><span>Posicionamiento</span><span>Roadmap</span><span>Pricing</span></div>
+                    </div>
+                </div></div>
+            </div>
+
+            <div class="svc rv">
+                <button class="svc-row" aria-expanded="false">
+                    <span class="svc-num">IV.</span>
+                    <span class="svc-title">Branding e Identidad</span>
+                    <span class="svc-plus" aria-hidden="true"></span>
+                </button>
+                <div class="svc-body"><div class="svc-body-in">
+                    <div class="svc-detail">
+                        <span></span>
+                        <p>Su marca es su primera impresión. Creamos identidades visuales y verbales que captan la atención, generan confianza y elevan la percepción de valor de su empresa.</p>
+                        <div class="svc-tags"><span>Identidad visual</span><span>Naming</span><span>Tono de voz</span><span>Brand system</span></div>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PROCESO
+     ═══════════════════════════════════════════ -->
+<section id="proceso" class="sec-pad">
+    <span class="sec-index"><b>03</b> / 06</span>
+    <div class="container">
+        <header class="sec-head">
+            <p class="kicker rv">Cómo trabajamos</p>
+            <h2 class="display rv rv-d1">Un método probado, <em>sin humo</em>.</h2>
+        </header>
+        <div class="steps">
+            <article class="step rv">
+                <span class="s-num">Fase 01</span>
+                <h3>Diagnóstico</h3>
+                <p>Auditamos su marca, su embudo y su mercado. Datos primero: dónde está el negocio hoy y dónde se pierde valor.</p>
+                <span class="s-line"></span>
+            </article>
+            <article class="step rv rv-d1">
+                <span class="s-num">Fase 02</span>
+                <h3>Estrategia</h3>
+                <p>Definimos posicionamiento, canales y prioridades. Una hoja de ruta clara con objetivos medibles y plazos realistas.</p>
+                <span class="s-line"></span>
+            </article>
+            <article class="step rv rv-d2">
+                <span class="s-num">Fase 03</span>
+                <h3>Ejecución</h3>
+                <p>Lanzamos campañas, activos y sistemas. Sprints cortos, entregas visibles y comunicación directa, sin intermediarios.</p>
+                <span class="s-line"></span>
+            </article>
+            <article class="step rv rv-d3">
+                <span class="s-num">Fase 04</span>
+                <h3>Optimización</h3>
+                <p>Medimos, aprendemos e iteramos. Lo que funciona se escala; lo que no, se corta. Reporting transparente cada mes.</p>
+                <span class="s-line"></span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NOSOTROS
+     ═══════════════════════════════════════════ -->
+<section id="nosotros" class="sec-pad">
+    <span class="sec-index"><b>04</b> / 06</span>
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-copy">
+                <p class="kicker rv">Quiénes somos</p>
+                <h2 class="display rv rv-d1" style="font-size:clamp(36px,5.4vw,72px); margin:26px 0 34px">Una agencia <em>diferente</em>.</h2>
+                <div class="rv rv-d2">
+                    <p class="lede">En Alh Partners no vendemos servicios — construimos resultados. Trabajamos con pequeñas empresas y emprendedores que quieren crecer de verdad, no solo tener una web bonita.</p>
+                    <p class="lede">Combinamos estrategia, creatividad y datos para crear sistemas de marketing que funcionan a largo plazo. Sin humo, sin promesas vacías.</p>
+                </div>
+                <div class="about-values">
+                    <div class="value rv"><i>a.</i><div><b>Transparencia radical</b><span>Acceso total a datos, cuentas y reporting. Su inversión, sus números.</span></div></div>
+                    <div class="value rv rv-d1"><i>b.</i><div><b>Socios, no proveedores</b><span>Nos involucramos en su negocio como si fuera el nuestro.</span></div></div>
+                    <div class="value rv rv-d2"><i>c.</i><div><b>Obsesión por el resultado</b><span>Cada acción responde a una métrica. Lo que no mueve la aguja, sobra.</span></div></div>
+                </div>
+            </div>
+            <aside class="metric-card rv rv-d2">
+                <div class="metric">
+                    <div class="num"><span data-count="50">0</span><span class="suf">+</span></div>
+                    <div class="lbl">Clientes atendidos</div>
+                    <p class="note">Pymes y emprendedores en múltiples sectores.</p>
+                </div>
+                <div class="metric">
+                    <div class="num"><span data-count="4">0</span></div>
+                    <div class="lbl">Áreas de servicio</div>
+                    <p class="note">Marketing, growth, estrategia y branding.</p>
+                </div>
+                <div class="metric">
+                    <div class="num"><span data-count="100">0</span><span class="suf">%</span></div>
+                    <div class="lbl">Enfoque en resultados</div>
+                    <p class="note">Sin métricas de vanidad. Solo negocio.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIOS
+     ═══════════════════════════════════════════ -->
+<section id="testimonios" class="sec-pad">
+    <span class="sec-index"><b>05</b> / 06</span>
+    <div class="container">
+        <header class="sec-head" style="margin-bottom:clamp(40px,5vw,64px)">
+            <p class="kicker rv">Lo que dicen</p>
+            <h2 class="display rv rv-d1">Clientes que ya <em>crecen</em>.</h2>
+        </header>
+        <div class="t-viewport rv rv-d2">
+            <div class="t-track" id="t-track">
+                <div class="t-slide">
+                    <p class="t-quote">Duplicamos las ventas online en seis meses. Por primera vez sabemos exactamente qué funciona y por qué.</p>
+                    <div class="t-who">
+                        <span class="ava">M</span>
+                        <div><b>María G.</b><span>E-commerce · Moda</span></div>
+                    </div>
+                </div>
+                <div class="t-slide">
+                    <p class="t-quote">Dejamos de improvisar. Ahora tenemos una estrategia clara y un socio que responde en horas, no en semanas.</p>
+                    <div class="t-who">
+                        <span class="ava">J</span>
+                        <div><b>Javier R.</b><span>Servicios profesionales</span></div>
+                    </div>
+                </div>
+                <div class="t-slide">
+                    <p class="t-quote">El rebranding cambió cómo nos percibe el mercado. Cerramos clientes más grandes con menos esfuerzo comercial.</p>
+                    <div class="t-who">
+                        <span class="ava">L</span>
+                        <div><b>Lucía M.</b><span>Consultora B2B</span></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Section Closing Line -->
-    <div class="mt-[120px] max-w-7xl mx-auto">
-        <div class="w-full h-[1px] bg-primary-container opacity-40"></div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- CONVERSIÓN SECTION                          -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="flex flex-col items-center justify-center py-[140px] px-6 text-center bg-[#111111] relative overflow-hidden" id="conversion">
-    <!-- Label -->
-    <div class="mb-8">
-        <span class="text-[#E8C357] font-label text-xs font-bold letter-spacing-widest uppercase inline-block" style="letter-spacing: 0.2em;">¿LISTO PARA CRECER?</span>
-    </div>
-    <!-- Headline -->
-    <h2 class="serif-display text-white text-5xl md:text-7xl font-bold mb-8 max-w-4xl leading-tight">
-        Hablemos de tu negocio.
-    </h2>
-    <!-- Subtitle -->
-    <p class="font-body text-[#A0A0A0] text-lg md:text-xl font-light mb-12 max-w-2xl leading-relaxed">
-        Reserva una llamada estratégica gratuita de 30 minutos. Sin compromisos.
-    </p>
-    <!-- CTA Button -->
-    <div class="group relative mb-10">
-        <a href="#calendly" class="bg-[#B8962E] text-white font-bold text-[16px] px-12 py-[20px] rounded-[2px] transition-all duration-300 hover:brightness-110 active:scale-95 flex items-center gap-4 no-underline">
-            Reservar llamada gratuita
-            <span class="material-symbols-outlined text-xl">arrow_forward</span>
-        </a>
-        <!-- Interaction Glow -->
-        <div class="absolute -inset-1 bg-[#B8962E] opacity-0 blur-xl group-hover:opacity-10 transition-opacity duration-500 rounded-full"></div>
-    </div>
-    <!-- Assurance Label -->
-    <p class="text-[#606060] font-label text-[11px] uppercase tracking-widest font-medium">
-        Respondemos en menos de 24 horas.
-    </p>
-    <!-- Bottom Line -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-[#B8962E]/30"></div>
-</section>
-
-<!-- Quote Section -->
-<section class="py-24 bg-surface text-center">
-    <div class="max-w-4xl mx-auto px-8">
-        <div class="w-12 h-[1px] bg-primary mx-auto mb-12"></div>
-        <p class="serif-display italic text-2xl text-on-surface-variant opacity-60">
-            "La estrategia no es el resultado de la suerte, sino del diseño intencional."
-        </p>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- CALENDLY SECTION                            -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="py-[100px] px-6 md:px-12 bg-[#0A0A0A]" id="calendly">
-    <div class="max-w-4xl mx-auto text-center mb-16">
-        <span class="text-[#E8C357] font-label text-xs font-bold uppercase inline-block mb-6" style="letter-spacing: 0.2em;">AGENDA TU CITA</span>
-        <h2 class="serif-display text-white text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Reserva tu llamada gratuita
-        </h2>
-        <p class="font-body text-[#A0A0A0] text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-            30 minutos para transformar tu negocio. Sin compromisos.
-        </p>
-    </div>
-    <div class="max-w-4xl mx-auto">
-        <!-- Calendly inline widget -->
-        <div class="calendly-inline-widget"
-            data-url="https://calendly.com/alhpartners?background_color=0a0a0a&text_color=e5e2e1&primary_color=b8962e"
-            style="min-width:320px;height:700px;">
-        </div>
-    </div>
-    <!-- Section Closing Line -->
-    <div class="mt-[80px] max-w-7xl mx-auto">
-        <div class="w-full h-[1px] bg-primary-container opacity-40"></div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- CONTACTO SECTION                            -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="py-[120px] px-6 md:px-12 bg-[#0A0A0A]" id="contacto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-        <!-- Left Column -->
-        <div class="flex flex-col justify-start">
-            <span class="text-[#E8C357] font-body text-[0.75rem] uppercase tracking-[0.2em] mb-4">CONTACTO</span>
-            <h2 class="serif-display text-white text-5xl md:text-6xl mb-12 leading-tight tracking-tighter">
-                ¿Tienes alguna pregunta?
-            </h2>
-            <div class="space-y-8 mt-4">
-                <div class="flex flex-col">
-                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">Email</span>
-                    <span class="text-[#A0A0A0] text-lg font-light">hola@alhpartners.com</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">LinkedIn</span>
-                    <span class="text-[#A0A0A0] text-lg font-light">/company/alhpartners</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-1">Ubicación</span>
-                    <span class="text-[#A0A0A0] text-lg font-light">España</span>
-                </div>
+        <div class="t-nav rv rv-d3">
+            <div class="t-arrows">
+                <button class="t-btn" id="t-prev" aria-label="Testimonio anterior">←</button>
+                <button class="t-btn" id="t-next" aria-label="Testimonio siguiente">→</button>
             </div>
-        </div>
-        <!-- Right Column - Form -->
-        <div class="flex flex-col">
-            <form class="space-y-10" onsubmit="event.preventDefault();">
-                <div>
-                    <input class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300" placeholder="Nombre" type="text"/>
-                </div>
-                <div>
-                    <input class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300" placeholder="Email" type="email"/>
-                </div>
-                <div>
-                    <textarea class="w-full bg-transparent border-0 border-b border-[#2A2A2A] py-4 text-white placeholder-[#606060] focus:ring-0 focus:border-primary transition-colors duration-300 resize-none" placeholder="Mensaje" rows="4"></textarea>
-                </div>
-                <div class="pt-6">
-                    <button class="bg-[#B8962E] text-white font-bold py-[14px] px-[32px] rounded-[2px] hover:bg-[#A38528] transition-colors duration-300 tracking-wide uppercase text-sm" type="submit">
-                        Enviar mensaje
-                    </button>
-                </div>
-            </form>
+            <div class="t-dots" id="t-dots"></div>
+            <span class="t-count"><b id="t-cur">01</b> / <span id="t-total">03</span></span>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- FOOTER                                      -->
-<!-- ═══════════════════════════════════════════ -->
-<footer class="bg-[#0A0A0A] border-t border-[#B8962E]/30">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-[80px]">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <!-- Footer Left -->
-            <div class="flex flex-col">
-                <h2 class="serif-display text-white text-[20px] mb-2 tracking-tight">Alh Partners</h2>
-                <p class="text-[#A0A0A0] font-body text-sm tracking-wide">Marketing · Growth · Strategy</p>
+<!-- ═══════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════ -->
+<section id="faq" class="sec-pad">
+    <span class="sec-index"><b>06</b> / 06</span>
+    <div class="container">
+        <div class="faq-grid">
+            <div>
+                <p class="kicker rv">Preguntas frecuentes</p>
+                <h2 class="display rv rv-d1" style="font-size:clamp(32px,4.4vw,54px); margin-top:26px">Todo lo que necesita saber <em>antes de empezar</em>.</h2>
+                <p class="lede rv rv-d2" style="margin-top:28px; font-size:15px">¿Tiene otra pregunta? Escríbanos o reserve una llamada — respondemos en menos de 24 horas.</p>
             </div>
-            <!-- Footer Central -->
-            <div class="flex flex-col space-y-4">
-                <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-2">Secciones</span>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#servicios">Servicios</a>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#nosotros">Quiénes somos</a>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-[#E8C357] transition-colors" href="#calendly">Reservar llamada</a>
-            </div>
-            <!-- Footer Right -->
-            <div class="flex flex-col space-y-4">
-                <span class="text-[#606060] text-[10px] uppercase tracking-widest mb-2">Síguenos</span>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-white transition-colors" href="#">LinkedIn</a>
-                <a class="text-[#A0A0A0] uppercase text-[11px] tracking-[0.15em] hover:text-white transition-colors" href="#">Instagram</a>
+            <div class="faq-list">
+                <div class="faq-item rv">
+                    <button class="faq-q" aria-expanded="false"><span>¿Con qué tipo de empresas trabajáis?</span><span class="ico">+</span></button>
+                    <div class="faq-a"><div class="faq-a-in"><p>Principalmente con pymes y emprendedores que ya tienen un producto o servicio validado y quieren escalar. Si su negocio factura y busca crecer con método, encajamos.</p></div></div>
+                </div>
+                <div class="faq-item rv">
+                    <button class="faq-q" aria-expanded="false"><span>¿Cuánto tardan en verse resultados?</span><span class="ico">+</span></button>
+                    <div class="faq-a"><div class="faq-a-in"><p>Depende del punto de partida y del canal. En medios pagados solemos ver señales en las primeras 4–6 semanas; las estrategias de posicionamiento y branding maduran en 3–6 meses. Siempre definimos hitos medibles desde el día uno.</p></div></div>
+                </div>
+                <div class="faq-item rv">
+                    <button class="faq-q" aria-expanded="false"><span>¿Exigís permanencia?</span><span class="ico">+</span></button>
+                    <div class="faq-a"><div class="faq-a-in"><p>No. Trabajamos con acuerdos flexibles porque preferimos retener clientes por resultados, no por contrato. Recomendamos un mínimo de 3 meses para poder ejecutar y medir con rigor.</p></div></div>
+                </div>
+                <div class="faq-item rv">
+                    <button class="faq-q" aria-expanded="false"><span>¿Cómo se estructura la inversión?</span><span class="ico">+</span></button>
+                    <div class="faq-a"><div class="faq-a-in"><p>Cada propuesta se diseña a medida tras el diagnóstico inicial. Separamos siempre el fee de agencia de la inversión publicitaria, y usted mantiene la propiedad de todas sus cuentas y activos.</p></div></div>
+                </div>
+                <div class="faq-item rv">
+                    <button class="faq-q" aria-expanded="false"><span>¿Cómo empezamos?</span><span class="ico">+</span></button>
+                    <div class="faq-a"><div class="faq-a-in"><p>Reserve una llamada estratégica gratuita de 30 minutos. Analizamos su situación, le damos una primera lectura honesta y, si tiene sentido para ambos, preparamos una propuesta.</p></div></div>
+                </div>
             </div>
         </div>
-        <!-- Bottom Bar -->
-        <div class="pt-12 mt-16 border-t border-white/5 flex justify-center">
-            <p class="text-[#606060] text-[11px] font-light tracking-wider">
-                © 2025 Alh Partners. Todos los derechos reservados.
-            </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA
+     ═══════════════════════════════════════════ -->
+<section id="cta" class="sec-pad">
+    <div class="glow"></div>
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="container inner">
+        <p class="kicker rv" style="justify-content:center">¿Listo para crecer?</p>
+        <h2 class="display rv rv-d1">Hablemos de <em>tu negocio</em>.</h2>
+        <p class="lede rv rv-d2">Reserva una llamada estratégica gratuita de 30 minutos. Sin compromisos, sin guiones de venta.</p>
+        <a href="#calendly" class="btn btn-gold rv rv-d3" data-magnetic><span>Reservar llamada gratuita</span><span class="arr">→</span></a>
+        <p class="assure rv rv-d4">Respondemos en menos de 24 horas</p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CALENDLY
+     ═══════════════════════════════════════════ -->
+<section id="calendly" class="sec-pad">
+    <div class="container">
+        <div class="cal-head">
+            <p class="kicker rv" style="justify-content:center">Agenda tu cita</p>
+            <h2 class="display rv rv-d1">Reserva tu llamada <em>gratuita</em></h2>
+            <p class="lede rv rv-d2">30 minutos para transformar tu negocio. Sin compromisos.</p>
+        </div>
+        <div class="cal-frame rv rv-d2">
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/alhpartners?background_color=121210&text_color=edeae3&primary_color=c8a350"
+                style="min-width:320px;height:700px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACTO
+     ═══════════════════════════════════════════ -->
+<section id="contacto" class="sec-pad">
+    <div class="container">
+        <div class="contact-grid">
+            <div>
+                <p class="kicker rv">Contacto</p>
+                <h2 class="display rv rv-d1" style="font-size:clamp(34px,4.8vw,60px); margin-top:26px">¿Tienes alguna <em>pregunta</em>?</h2>
+                <div class="rv rv-d2">
+                    <div class="c-item"><small>Email</small><a href="mailto:hola@alhpartners.com">hola@alhpartners.com</a></div>
+                    <div class="c-item"><small>LinkedIn</small><a href="#" rel="noopener">/company/alhpartners</a></div>
+                    <div class="c-item"><small>Ubicación</small><span class="v">España · Trabajamos en remoto</span></div>
+                </div>
+            </div>
+            <div class="rv rv-d2">
+                <form id="contact-form" novalidate>
+                    <div class="field">
+                        <input id="f-name" type="text" placeholder=" " required autocomplete="name"/>
+                        <label for="f-name">Nombre</label>
+                        <span class="fline"></span>
+                    </div>
+                    <div class="field">
+                        <input id="f-mail" type="email" placeholder=" " required autocomplete="email"/>
+                        <label for="f-mail">Email</label>
+                        <span class="fline"></span>
+                    </div>
+                    <div class="field">
+                        <textarea id="f-msg" rows="4" placeholder=" " required></textarea>
+                        <label for="f-msg">Cuéntanos sobre tu proyecto</label>
+                        <span class="fline"></span>
+                    </div>
+                    <button type="submit" class="btn btn-gold" data-magnetic><span>Enviar mensaje</span><span class="arr">→</span></button>
+                    <p id="form-ok" role="status">Gracias por escribirnos. Te responderemos en menos de 24 horas.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer>
+    <div class="foot-word" aria-hidden="true">Alh Partners</div>
+    <div class="container">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="#hero" class="brand">Alh <b>Partners</b></a>
+                <p>Consultoría estratégica de marketing y crecimiento para empresas listas para escalar.</p>
+                <p class="foot-clock">España · <b id="clock">--:--</b> CET</p>
+            </div>
+            <div>
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proceso">Método</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#testimonios">Clientes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Empezar</h4>
+                <ul>
+                    <li><a href="#calendly">Reservar llamada</a></li>
+                    <li><a href="#contacto">Escribirnos</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#" rel="noopener">LinkedIn</a></li>
+                    <li><a href="#" rel="noopener">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© 2026 Alh Partners. Todos los derechos reservados.</span>
+            <span>Marketing · Growth · Estrategia</span>
         </div>
     </div>
 </footer>
 
-<!-- Calendly Widget Script -->
+<!-- BACK TO TOP -->
+<button id="toTop" aria-label="Volver arriba">↑</button>
+
+<!-- Calendly Widget -->
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-<!-- Mobile Menu Toggle Script -->
 <script>
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
+(function(){
+'use strict';
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ── Preloader ─────────────────────────────── */
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('loader').classList.add('done');
+        document.body.classList.add('loaded');
+    }, reduceMotion ? 0 : 900);
+});
+/* Fallback if load never fires (blocked assets) */
+setTimeout(() => {
+    document.getElementById('loader').classList.add('done');
+    document.body.classList.add('loaded');
+}, 3000);
+
+/* ── Scroll progress + nav hide + back-to-top ── */
+const progress = document.getElementById('progress');
+const topnav = document.getElementById('topnav');
+const toTop = document.getElementById('toTop');
+let lastY = 0;
+window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    topnav.classList.toggle('hide', y > 400 && y > lastY);
+    toTop.classList.toggle('show', y > 800);
+    lastY = y;
+}, { passive: true });
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+/* ── Mobile menu ───────────────────────────── */
+const burger = document.getElementById('burger');
+const mmenu = document.getElementById('mobile-menu');
+function toggleMenu(force){
+    const open = force !== undefined ? force : !mmenu.classList.contains('open');
+    mmenu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    mmenu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => toggleMenu());
+mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+/* ── Reveal on scroll ──────────────────────── */
+const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
-    // Close mobile menu on link click
-    document.querySelectorAll('#mobile-menu a').forEach(function(link) {
-        link.addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.add('hidden');
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ── Count-up numbers ──────────────────────── */
+const cio = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        cio.unobserve(e.target);
+        const el = e.target, end = +el.dataset.count, dur = 1600, t0 = performance.now();
+        if (reduceMotion) { el.textContent = end; return; }
+        (function tick(t){
+            const p = Math.min((t - t0) / dur, 1);
+            el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
+            if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+    });
+}, { threshold: 0.6 });
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+/* ── Scrollspy nav ─────────────────────────── */
+const spyLinks = document.querySelectorAll('[data-spy]');
+const spyIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        spyLinks.forEach(l => l.classList.toggle('active', l.dataset.spy === e.target.id));
+    });
+}, { rootMargin: '-40% 0px -55% 0px' });
+spyLinks.forEach(l => { const s = document.getElementById(l.dataset.spy); if (s) spyIO.observe(s); });
+
+/* ── Manifiesto: word-by-word highlight ────── */
+const mq = document.getElementById('mquote');
+if (mq) {
+    const frag = document.createDocumentFragment();
+    mq.childNodes.forEach(node => {
+        const gold = node.nodeType === 1 && node.hasAttribute('data-gold');
+        (node.textContent || '').split(/\s+/).filter(Boolean).forEach(word => {
+            const s = document.createElement('span');
+            s.className = 'w' + (gold ? ' gold' : '');
+            s.textContent = word;
+            frag.appendChild(s);
+            frag.appendChild(document.createTextNode(' '));
         });
     });
+    mq.textContent = '';
+    mq.appendChild(frag);
+    const words = mq.querySelectorAll('.w');
+    function litWords(){
+        const r = mq.getBoundingClientRect();
+        const p = Math.min(Math.max((innerHeight * 0.85 - r.top) / (r.height + innerHeight * 0.3), 0), 1);
+        const n = Math.floor(p * words.length);
+        words.forEach((w, i) => w.classList.toggle('lit', i < n));
+    }
+    window.addEventListener('scroll', litWords, { passive: true });
+    litWords();
+}
+
+/* ── Servicios accordion ───────────────────── */
+document.querySelectorAll('.svc').forEach(svc => {
+    const btn = svc.querySelector('.svc-row');
+    btn.addEventListener('click', () => {
+        const open = svc.classList.contains('open');
+        document.querySelectorAll('.svc.open').forEach(o => {
+            o.classList.remove('open');
+            o.querySelector('.svc-row').setAttribute('aria-expanded', 'false');
+        });
+        if (!open) { svc.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+});
+/* Open the first service by default */
+const first = document.querySelector('.svc');
+if (first) { first.classList.add('open'); first.querySelector('.svc-row').setAttribute('aria-expanded','true'); }
+
+/* ── FAQ accordion ─────────────────────────── */
+document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => {
+        const open = item.classList.toggle('open');
+        q.setAttribute('aria-expanded', open);
+    });
+});
+
+/* ── Steps: mouse-follow glow ──────────────── */
+document.querySelectorAll('.step').forEach(step => {
+    step.addEventListener('mousemove', e => {
+        const r = step.getBoundingClientRect();
+        step.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        step.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+});
+
+/* ── Testimonial slider ────────────────────── */
+const track = document.getElementById('t-track');
+const slides = track.children.length;
+const dotsBox = document.getElementById('t-dots');
+const cur = document.getElementById('t-cur');
+let ti = 0, timer;
+for (let i = 0; i < slides; i++) {
+    const d = document.createElement('button');
+    d.className = 't-dot'; d.setAttribute('aria-label', 'Ir al testimonio ' + (i + 1));
+    d.addEventListener('click', () => go(i, true));
+    dotsBox.appendChild(d);
+}
+const dots = dotsBox.children;
+function go(i, manual){
+    ti = (i + slides) % slides;
+    track.style.transform = 'translateX(-' + ti * 100 + '%)';
+    [...dots].forEach((d, k) => d.classList.toggle('on', k === ti));
+    cur.textContent = String(ti + 1).padStart(2, '0');
+    if (manual) restart();
+}
+function restart(){ clearInterval(timer); if (!reduceMotion) timer = setInterval(() => go(ti + 1), 6000); }
+document.getElementById('t-prev').addEventListener('click', () => go(ti - 1, true));
+document.getElementById('t-next').addEventListener('click', () => go(ti + 1, true));
+track.closest('section').addEventListener('mouseenter', () => clearInterval(timer));
+track.closest('section').addEventListener('mouseleave', restart);
+go(0); restart();
+
+/* ── Custom cursor ─────────────────────────── */
+if (matchMedia('(hover:hover) and (pointer:fine)').matches && !reduceMotion) {
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mx = -100, my = -100, rx = -100, ry = -100;
+    addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function loop(){
+        rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+        dot.style.transform = 'translate(' + (mx - 2.5) + 'px,' + (my - 2.5) + 'px)';
+        ring.style.transform = 'translate(' + (rx - ring.offsetWidth / 2) + 'px,' + (ry - ring.offsetHeight / 2) + 'px)';
+        requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a, button, .svc-row, .faq-q').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('big'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('big'));
+    });
+}
+
+/* ── Magnetic buttons ──────────────────────── */
+if (matchMedia('(hover:hover)').matches && !reduceMotion) {
+    document.querySelectorAll('[data-magnetic]').forEach(btn => {
+        btn.addEventListener('mousemove', e => {
+            const r = btn.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) * 0.18;
+            const y = (e.clientY - r.top - r.height / 2) * 0.28;
+            btn.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        });
+        btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+}
+
+/* ── Contact form (prototype: no backend) ──── */
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    document.getElementById('form-ok').classList.add('show');
+    form.querySelectorAll('input, textarea').forEach(f => f.value = '');
+});
+
+/* ── Footer clock (Madrid) ─────────────────── */
+const clock = document.getElementById('clock');
+function tickClock(){
+    clock.textContent = new Intl.DateTimeFormat('es-ES', {
+        hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid'
+    }).format(new Date());
+}
+tickClock(); setInterval(tickClock, 30000);
+})();
 </script>
 
 </body>
