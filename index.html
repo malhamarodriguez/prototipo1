@@ -3,14 +3,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ALH Partners — Consultoría de Marketing</title>
-<meta name="description" content="Pensamiento estratégico. Resultados reales. Consultoría de marketing para empresas que quieren crecer. Reserva una llamada gratuita."/>
+<title>ALH Partners | Consultoría de Marketing Digital para Pymes y E-commerce en España</title>
+<meta name="description" content="Consultoría de marketing digital en España para pymes, e-commerce, retail y negocios locales. Estrategia, campañas y conversión con resultados medibles. Primera llamada gratuita."/>
 <meta name="theme-color" content="#0D1B2A"/>
 <meta property="og:title" content="ALH Partners — Consultoría de Marketing"/>
 <meta property="og:description" content="Pensamiento estratégico. Resultados reales. Reserva una llamada gratuita."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="https://malhamarodriguez.github.io/prototipo1/assets/logo.png"/>
+<meta property="og:image" content="https://malhamarodriguez.github.io/prototipo1/assets/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <link rel="icon" href="favicon.ico" sizes="48x48"/>
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +24,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "ALH Partners",
-  "description": "Consultoría estratégica de marketing.",
+  "description": "Consultoría de marketing digital para pymes, e-commerce y negocios locales en España.",
   "email": "hola@alhpartners.com",
   "areaServed": "ES"
 }
@@ -30,13 +33,13 @@
 <style>
 /* ══════════ PALETA — Brand Board v2 ══════════ */
 :root{
-    --navy:       #0D1B2A;   /* texto principal, headers, footer, fondos oscuros */
-    --sage:       #7D8F7A;   /* acento secundario: iconos, hover suave */
-    --taupe:      #CBBBA0;   /* acento cálido: líneas, bordes, fondos alternos */
-    --grey-light: #F2F2F2;   /* fondo de secciones alternas */
-    --white:      #FFFFFF;   /* fondo principal */
-    --ink-dim:    #5A6472;   /* texto secundario (AA sobre blanco) */
-    --line:       #E7E3DC;   /* hairlines derivadas del taupe */
+    --navy:       #0D1B2A;
+    --sage:       #7D8F7A;
+    --taupe:      #CBBBA0;
+    --grey-light: #F2F2F2;
+    --white:      #FFFFFF;
+    --ink-dim:    #5A6472;
+    --line:       #E7E3DC;
     --serif:      'Cormorant Garamond', Georgia, serif;
     --sans:       'Inter', system-ui, sans-serif;
     --ease:       cubic-bezier(.22,1,.36,1);
@@ -59,7 +62,6 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
 
 .container{ width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(22px,5vw,48px); }
 
-/* Tipografía */
 .label{
     font-size:11px; font-weight:500; letter-spacing:.32em; text-transform:uppercase; color:var(--ink-dim);
     display:inline-flex; align-items:center; gap:14px;
@@ -68,7 +70,6 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
 h1,h2{ font-family:var(--serif); font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:.02em; }
 .lede{ color:var(--ink-dim); font-weight:400; font-size:clamp(16px,1.3vw,18px); }
 
-/* Botones */
 .btn{
     display:inline-flex; align-items:center; gap:12px;
     background:var(--navy); color:var(--white);
@@ -82,7 +83,7 @@ h1,h2{ font-family:var(--serif); font-weight:600; color:var(--navy); line-height
 .btn-line:hover{ background:var(--navy); color:var(--white); }
 .micro{ font-size:12px; letter-spacing:.06em; color:var(--ink-dim); }
 
-/* Reveal */
+/* Scroll-reveal (fade-in + translate-y) */
 .rv{ opacity:0; transform:translateY(26px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
 .rv.in{ opacity:1; transform:none; }
 .rv-d1{ transition-delay:.12s } .rv-d2{ transition-delay:.24s } .rv-d3{ transition-delay:.36s }
@@ -90,8 +91,7 @@ h1,h2{ font-family:var(--serif); font-weight:600; color:var(--navy); line-height
 /* ══════════ NAVBAR ══════════ */
 nav{
     position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h);
-    display:flex; align-items:center;
-    background:var(--white);
+    display:flex; align-items:center; background:var(--white);
     border-bottom:1px solid transparent; transition:border-color .4s;
 }
 body.scrolled nav{ border-color:var(--line); }
@@ -123,7 +123,7 @@ nav .inner{ display:flex; align-items:center; justify-content:space-between; wid
     opacity:0; visibility:hidden; transition:opacity .45s var(--ease), visibility .45s;
 }
 #menu.open{ opacity:1; visibility:visible; }
-#menu a:not(.btn){ font-family:var(--serif); font-size:34px; color:var(--navy); padding:10px 0; }
+#menu a:not(.btn){ font-family:var(--serif); font-size:32px; color:var(--navy); padding:9px 0; }
 #menu .btn{ margin-top:26px; }
 @media (max-width:860px){
     .nav-links{ display:none; }
@@ -151,16 +151,16 @@ nav .inner{ display:flex; align-items:center; justify-content:space-between; wid
     width:1px; height:64px; background:var(--taupe);
 }
 
-/* ══════════ STATS ══════════ */
+/* ══════════ STATS (texto fijo honesto) ══════════ */
 #stats{ background:var(--grey-light); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 #stats .row{
     display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
     padding:clamp(48px,6vw,68px) 0; text-align:center;
 }
 .stat .num{
-    font-family:var(--serif); font-size:clamp(40px,4.6vw,58px); font-weight:600; color:var(--navy); line-height:1;
+    font-family:var(--serif); font-size:clamp(38px,4.4vw,54px); font-weight:600; color:var(--navy); line-height:1;
 }
-.stat .num sup{ font-size:.55em; color:var(--sage); }
+.stat .num em{ font-style:italic; color:var(--sage); }
 .stat p{ margin-top:8px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-dim); }
 @media (max-width:700px){ #stats .row{ grid-template-columns:1fr; gap:28px; } }
 
@@ -170,7 +170,7 @@ section{ position:relative; }
 .head{ text-align:center; margin-bottom:clamp(48px,6vw,72px); }
 .head h2{ font-size:clamp(34px,4.6vw,54px); margin-top:20px; }
 
-/* Servicios (fondo blanco) */
+/* Servicios */
 .services{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
 .svc{
     background:var(--white); padding:clamp(34px,4vw,56px);
@@ -189,7 +189,7 @@ section{ position:relative; }
 .svc:hover::after{ transform:scaleX(1); }
 @media (max-width:760px){ .services{ grid-template-columns:1fr; } }
 
-/* Proceso (fondo navy) */
+/* Proceso (navy) */
 #proceso{ background:var(--navy); }
 #proceso .label{ color:var(--taupe); }
 #proceso .label::before,#proceso .label::after{ background:rgba(125,143,122,.4); }
@@ -205,22 +205,74 @@ section{ position:relative; }
 .step p{ color:#A8B4C2; font-size:14px; max-width:26ch; margin:0 auto; }
 @media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
 
-/* Testimonio (gris claro) */
-#quote{ background:var(--grey-light); text-align:center; }
-#quote blockquote{
-    font-family:var(--serif); font-size:clamp(24px,3.2vw,36px); font-weight:500; font-style:italic;
-    color:var(--navy); max-width:26ch; margin:0 auto; line-height:1.4;
+/* Sobre mí */
+#sobre{ background:var(--white); }
+.about{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(40px,6vw,88px); align-items:center; }
+.about .photo{
+    aspect-ratio:4/5; background:var(--grey-light); border:1px solid var(--line);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+    text-align:center; padding:24px;
 }
-#quote figcaption{ margin-top:24px; font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); }
+.about .photo img.ph-mono{ height:72px; opacity:.35; }
+.about .photo span{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-dim); }
+.about .label{ margin-bottom:20px; }
+.about h2{ font-size:clamp(30px,3.8vw,46px); margin-bottom:8px; }
+.about .role{ font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--sage); margin-bottom:26px; }
+.about p.bio{ color:var(--ink-dim); font-size:15.5px; max-width:52ch; }
+.about p.bio + p.bio{ margin-top:16px; }
+.about .sig{
+    margin-top:30px; font-family:var(--serif); font-style:italic; font-size:22px; color:var(--navy);
+}
+@media (max-width:860px){ .about{ grid-template-columns:1fr; } .about .photo{ max-width:380px; margin:0 auto; } }
 
-/* Reservar (blanco) */
+/* Sectores */
+#sectores{ background:var(--grey-light); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+#sectores .wrap{ text-align:center; padding:clamp(52px,7vw,76px) 0; }
+#sectores .label{ margin-bottom:30px; }
+.sector-row{
+    display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:18px 0;
+}
+.sector-row span{
+    font-family:var(--serif); font-size:clamp(20px,2.4vw,28px); font-weight:500; color:var(--navy);
+    padding:0 clamp(16px,2.6vw,30px);
+}
+.sector-row span + span{ border-left:1px solid var(--taupe); }
+@media (max-width:640px){
+    .sector-row{ flex-direction:column; gap:12px; }
+    .sector-row span + span{ border-left:none; }
+}
+
+/* Testimonios (grid) */
+#testimonios{ background:var(--white); }
+.t-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.t-card{
+    background:var(--white); padding:clamp(30px,3.4vw,44px);
+    display:flex; flex-direction:column; transition:background .4s;
+}
+.t-card:hover{ background:var(--grey-light); }
+.t-card blockquote{
+    font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.5; color:var(--navy); flex:1;
+}
+.t-card blockquote::before{ content:'“'; color:var(--sage); }
+.t-card blockquote::after{ content:'”'; color:var(--sage); }
+.t-card .metric{
+    margin-top:22px; font-size:13px; font-weight:600; letter-spacing:.04em; color:var(--sage);
+}
+.t-card figcaption{
+    margin-top:8px; padding-top:14px; border-top:1px solid var(--line);
+    font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-dim);
+}
+@media (max-width:860px){ .t-grid{ grid-template-columns:1fr; } }
+
+/* Reservar */
+#reservar{ background:var(--grey-light); border-top:1px solid var(--line); }
 #reservar .head{ margin-bottom:clamp(36px,5vw,52px); }
 .cal-frame{
     max-width:920px; margin:0 auto; border:1px solid var(--line); background:var(--white); padding:8px;
 }
 #reservar .micro{ display:block; text-align:center; margin-top:20px; }
 
-/* ══════════ FOOTER (navy) ══════════ */
+/* ══════════ FOOTER ══════════ */
 footer{ background:var(--navy); color:#A8B4C2; }
 footer .top{
     display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;
@@ -241,7 +293,7 @@ footer .bottom{
     font-size:11px; letter-spacing:.1em;
 }
 
-/* WhatsApp */
+/* WhatsApp flotante */
 #wapp{
     position:fixed; right:24px; bottom:24px; z-index:90;
     width:52px; height:52px; border-radius:50%; background:var(--navy);
@@ -272,6 +324,7 @@ footer .bottom{
         <div class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#proceso">Proceso</a>
+            <a href="#sobre">Sobre mí</a>
             <a href="#contacto">Contacto</a>
             <a href="#reservar" class="btn"><span>Reservar llamada</span></a>
         </div>
@@ -285,6 +338,7 @@ footer .bottom{
 <div id="menu" aria-hidden="true">
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
+    <a href="#sobre">Sobre mí</a>
     <a href="#contacto">Contacto</a>
     <a href="#reservar" class="btn"><span>Reservar llamada</span><span class="arr">→</span></a>
 </div>
@@ -303,12 +357,12 @@ footer .bottom{
     <span class="rule" aria-hidden="true"></span>
 </header>
 
-<!-- STATS -->
+<!-- STATS: texto fijo honesto (sin contadores animados) -->
 <section id="stats">
     <div class="container row">
-        <div class="stat rv"><div class="num"><span data-count="50">0</span><sup>+</sup></div><p>Clientes atendidos</p></div>
-        <div class="stat rv rv-d1"><div class="num"><span data-count="4">0</span></div><p>Áreas de servicio</p></div>
-        <div class="stat rv rv-d2"><div class="num"><span data-count="90">0</span></div><p>Días a resultados medibles</p></div>
+        <div class="stat rv"><div class="num">100<em>%</em></div><p>Atención personalizada</p></div>
+        <div class="stat rv rv-d1"><div class="num">4</div><p>Áreas de servicio</p></div>
+        <div class="stat rv rv-d2"><div class="num">72<em>h</em></div><p>Tu plan de acción</p></div>
     </div>
 </section>
 
@@ -359,13 +413,68 @@ footer .bottom{
     </div>
 </section>
 
-<!-- TESTIMONIO -->
-<section id="quote" class="pad">
+<!-- SOBRE MÍ -->
+<section id="sobre" class="pad">
     <div class="container">
-        <figure class="rv">
-            <blockquote>“Por primera vez sabemos exactamente qué funciona, qué cuesta y qué nos deja.”</blockquote>
-            <figcaption>María G. — E-commerce</figcaption>
-        </figure>
+        <div class="about">
+            <!-- [PENDIENTE: foto profesional] Sustituir este placeholder por <img src="assets/foto.jpg" alt="..."> -->
+            <div class="photo rv">
+                <img class="ph-mono" src="assets/logo-alh.png" alt=""/>
+                <span>[Pendiente: foto profesional]</span>
+            </div>
+            <div>
+                <p class="label rv">Sobre mí</p>
+                <h2 class="rv rv-d1">[Pendiente: Nombre y apellidos]</h2>
+                <p class="role rv rv-d1">Fundador · ALH Partners</p>
+                <div class="rv rv-d2">
+                    <p class="bio">Fundé ALH Partners con una convicción: el marketing de una pyme no debería ser una caja negra. Debería traer clientes, y deberías poder ver cómo y a qué coste.</p>
+                    <p class="bio">Tras [Pendiente: años de experiencia / trayectoria profesional], trabajo con un enfoque simple — estrategia clara, ejecución medible y honestidad sobre lo que funciona y lo que no.</p>
+                    <p class="bio">Sin equipos infinitos ni informes que nadie lee: hablas conmigo directamente, de principio a fin.</p>
+                </div>
+                <p class="sig rv rv-d3">[Pendiente: nombre]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores">
+    <div class="container wrap">
+        <p class="label rv">Con quién trabajo</p>
+        <div class="sector-row rv rv-d1">
+            <span>E-commerce</span>
+            <span>Servicios profesionales</span>
+            <span>B2B</span>
+            <span>Retail</span>
+            <span>Negocio local</span>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" class="pad">
+    <div class="container">
+        <div class="head">
+            <p class="label rv">Testimonios</p>
+            <h2 class="rv rv-d1">Lo que dicen quienes ya confían</h2>
+        </div>
+        <div class="t-grid">
+            <figure class="t-card rv">
+                <blockquote>Por primera vez sabemos exactamente qué funciona, qué cuesta y qué nos deja.</blockquote>
+                <p class="metric">[Pendiente: resultado en cifra]</p>
+                <figcaption>[Pendiente: nombre real] — E-commerce</figcaption>
+            </figure>
+            <figure class="t-card rv rv-d1">
+                <blockquote>[Pendiente: testimonio real de cliente]</blockquote>
+                <p class="metric">[Pendiente: resultado en cifra]</p>
+                <figcaption>[Pendiente: nombre] — [Pendiente: sector]</figcaption>
+            </figure>
+            <figure class="t-card rv rv-d2">
+                <blockquote>[Pendiente: testimonio real de cliente]</blockquote>
+                <p class="metric">[Pendiente: resultado en cifra]</p>
+                <figcaption>[Pendiente: nombre] — [Pendiente: sector]</figcaption>
+            </figure>
+        </div>
     </div>
 </section>
 
@@ -376,9 +485,17 @@ footer .bottom{
             <p class="label rv">Reservar</p>
             <h2 class="rv rv-d1">Hablemos de tu negocio</h2>
         </div>
+        <!--
+        [PENDIENTE: rango de inversión] Bloque opcional de pre-cualificación.
+        Descomentar y completar el importe cuando lo decidas:
+
+        <p class="micro" style="text-align:center; margin-bottom:28px">
+            Proyectos desde <strong>XXX €/mes</strong> · Propuesta a medida tras la llamada
+        </p>
+        -->
         <div class="cal-frame rv rv-d1">
             <div class="calendly-inline-widget"
-                data-url="https://calendly.com/alhpartners?background_color=ffffff&text_color=0d1b2a&primary_color=0d1b2a"
+                data-url="https://calendly.com/alhpartners?background_color=f2f2f2&text_color=0d1b2a&primary_color=0d1b2a"
                 style="min-width:320px;height:680px;">
             </div>
         </div>
@@ -393,6 +510,7 @@ footer .bottom{
             <span class="wordmark">ALH PARTNERS<small>CONSULTING</small></span>
             <div class="fcontact">
                 <a href="mailto:hola@alhpartners.com">hola@alhpartners.com</a>
+                <!-- ⚠️ NÚMERO WHATSAPP (1 de 2): sustituir 34600000000 por el real, formato internacional sin + -->
                 <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
                 <a href="#" rel="noopener">LinkedIn</a>
             </div>
@@ -404,7 +522,8 @@ footer .bottom{
     </div>
 </footer>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOTANTE -->
+<!-- ⚠️ NÚMERO WHATSAPP (2 de 2): sustituir 34600000000 por el real, formato internacional sin + -->
 <a id="wapp" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
 </a>
@@ -415,7 +534,6 @@ footer .bottom{
 <script>
 (function(){
 'use strict';
-const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* Scroll: hairline en nav + WhatsApp */
 const wapp = document.getElementById('wapp');
@@ -439,27 +557,11 @@ function toggleMenu(force){
 burger.addEventListener('click', () => toggleMenu());
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
-/* Reveal */
+/* Scroll-reveal — respeta prefers-reduced-motion (el CSS ya desactiva la transición) */
 const io = new IntersectionObserver(es => {
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: .15, rootMargin: '0px 0px -6% 0px' });
 document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el));
-
-/* Contadores */
-const cio = new IntersectionObserver(es => {
-    es.forEach(e => {
-        if (!e.isIntersecting) return;
-        cio.unobserve(e.target);
-        const el = e.target, end = +el.dataset.count, t0 = performance.now();
-        if (reduceMotion) { el.textContent = end; return; }
-        (function tick(t){
-            const p = Math.min((t - t0) / 1400, 1);
-            el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
-            if (p < 1) requestAnimationFrame(tick);
-        })(t0);
-    });
-}, { threshold: .6 });
-document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 })();
 </script>
 
