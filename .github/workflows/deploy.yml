@@ -22,7 +22,8 @@ jobs:
       - name: Publicar en la rama gh-pages
         run: |
           mkdir -p /tmp/site
-          cp index.html /tmp/site/
+          cp index.html favicon.ico apple-touch-icon.png /tmp/site/
+          cp -r assets /tmp/site/
           touch /tmp/site/.nojekyll
           cd /tmp/site
           git init -b gh-pages
