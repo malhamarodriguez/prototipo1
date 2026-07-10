@@ -205,67 +205,16 @@ section{ position:relative; }
 .step p{ color:#A8B4C2; font-size:14px; max-width:26ch; margin:0 auto; }
 @media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
 
-/* Sobre mí */
-#sobre{ background:var(--white); }
-.about{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(40px,6vw,88px); align-items:center; }
-.about .photo{
-    aspect-ratio:4/5; background:var(--grey-light); border:1px solid var(--line);
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
-    text-align:center; padding:24px;
+/* Testimonio (gris claro) */
+#quote{ background:var(--grey-light); text-align:center; }
+#quote blockquote{
+    font-family:var(--serif); font-size:clamp(24px,3.2vw,36px); font-weight:500; font-style:italic;
+    color:var(--navy); max-width:26ch; margin:0 auto; line-height:1.4;
 }
-.about .photo img.ph-mono{ height:72px; opacity:.35; }
-.about .photo span{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-dim); }
-.about .label{ margin-bottom:20px; }
-.about h2{ font-size:clamp(30px,3.8vw,46px); margin-bottom:8px; }
-.about .role{ font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--sage); margin-bottom:26px; }
-.about p.bio{ color:var(--ink-dim); font-size:15.5px; max-width:52ch; }
-.about p.bio + p.bio{ margin-top:16px; }
-.about .sig{
-    margin-top:30px; font-family:var(--serif); font-style:italic; font-size:22px; color:var(--navy);
-}
-@media (max-width:860px){ .about{ grid-template-columns:1fr; } .about .photo{ max-width:380px; margin:0 auto; } }
-
-/* Sectores */
-#sectores{ background:var(--grey-light); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-#sectores .wrap{ text-align:center; padding:clamp(52px,7vw,76px) 0; }
-#sectores .label{ margin-bottom:30px; }
-.sector-row{
-    display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:18px 0;
-}
-.sector-row span{
-    font-family:var(--serif); font-size:clamp(20px,2.4vw,28px); font-weight:500; color:var(--navy);
-    padding:0 clamp(16px,2.6vw,30px);
-}
-.sector-row span + span{ border-left:1px solid var(--taupe); }
-@media (max-width:640px){
-    .sector-row{ flex-direction:column; gap:12px; }
-    .sector-row span + span{ border-left:none; }
-}
-
-/* Testimonios (grid) */
-#testimonios{ background:var(--white); }
-.t-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-.t-card{
-    background:var(--white); padding:clamp(30px,3.4vw,44px);
-    display:flex; flex-direction:column; transition:background .4s;
-}
-.t-card:hover{ background:var(--grey-light); }
-.t-card blockquote{
-    font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.5; color:var(--navy); flex:1;
-}
-.t-card blockquote::before{ content:'“'; color:var(--sage); }
-.t-card blockquote::after{ content:'”'; color:var(--sage); }
-.t-card .metric{
-    margin-top:22px; font-size:13px; font-weight:600; letter-spacing:.04em; color:var(--sage);
-}
-.t-card figcaption{
-    margin-top:8px; padding-top:14px; border-top:1px solid var(--line);
-    font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-dim);
-}
-@media (max-width:860px){ .t-grid{ grid-template-columns:1fr; } }
+#quote figcaption{ margin-top:24px; font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); }
 
 /* Reservar */
-#reservar{ background:var(--grey-light); border-top:1px solid var(--line); }
+#reservar{ background:var(--white); }
 #reservar .head{ margin-bottom:clamp(36px,5vw,52px); }
 .cal-frame{
     max-width:920px; margin:0 auto; border:1px solid var(--line); background:var(--white); padding:8px;
@@ -324,7 +273,6 @@ footer .bottom{
         <div class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#proceso">Proceso</a>
-            <a href="#sobre">Sobre mí</a>
             <a href="#contacto">Contacto</a>
             <a href="#reservar" class="btn"><span>Reservar llamada</span></a>
         </div>
@@ -338,7 +286,6 @@ footer .bottom{
 <div id="menu" aria-hidden="true">
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
-    <a href="#sobre">Sobre mí</a>
     <a href="#contacto">Contacto</a>
     <a href="#reservar" class="btn"><span>Reservar llamada</span><span class="arr">→</span></a>
 </div>
@@ -413,68 +360,13 @@ footer .bottom{
     </div>
 </section>
 
-<!-- SOBRE MÍ -->
-<section id="sobre" class="pad">
+<!-- TESTIMONIO -->
+<section id="quote" class="pad">
     <div class="container">
-        <div class="about">
-            <!-- [PENDIENTE: foto profesional] Sustituir este placeholder por <img src="assets/foto.jpg" alt="..."> -->
-            <div class="photo rv">
-                <img class="ph-mono" src="assets/logo-alh.png" alt=""/>
-                <span>[Pendiente: foto profesional]</span>
-            </div>
-            <div>
-                <p class="label rv">Sobre mí</p>
-                <h2 class="rv rv-d1">[Pendiente: Nombre y apellidos]</h2>
-                <p class="role rv rv-d1">Fundador · ALH Partners</p>
-                <div class="rv rv-d2">
-                    <p class="bio">Fundé ALH Partners con una convicción: el marketing de una pyme no debería ser una caja negra. Debería traer clientes, y deberías poder ver cómo y a qué coste.</p>
-                    <p class="bio">Tras [Pendiente: años de experiencia / trayectoria profesional], trabajo con un enfoque simple — estrategia clara, ejecución medible y honestidad sobre lo que funciona y lo que no.</p>
-                    <p class="bio">Sin equipos infinitos ni informes que nadie lee: hablas conmigo directamente, de principio a fin.</p>
-                </div>
-                <p class="sig rv rv-d3">[Pendiente: nombre]</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SECTORES -->
-<section id="sectores">
-    <div class="container wrap">
-        <p class="label rv">Con quién trabajo</p>
-        <div class="sector-row rv rv-d1">
-            <span>E-commerce</span>
-            <span>Servicios profesionales</span>
-            <span>B2B</span>
-            <span>Retail</span>
-            <span>Negocio local</span>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section id="testimonios" class="pad">
-    <div class="container">
-        <div class="head">
-            <p class="label rv">Testimonios</p>
-            <h2 class="rv rv-d1">Lo que dicen quienes ya confían</h2>
-        </div>
-        <div class="t-grid">
-            <figure class="t-card rv">
-                <blockquote>Por primera vez sabemos exactamente qué funciona, qué cuesta y qué nos deja.</blockquote>
-                <p class="metric">[Pendiente: resultado en cifra]</p>
-                <figcaption>[Pendiente: nombre real] — E-commerce</figcaption>
-            </figure>
-            <figure class="t-card rv rv-d1">
-                <blockquote>[Pendiente: testimonio real de cliente]</blockquote>
-                <p class="metric">[Pendiente: resultado en cifra]</p>
-                <figcaption>[Pendiente: nombre] — [Pendiente: sector]</figcaption>
-            </figure>
-            <figure class="t-card rv rv-d2">
-                <blockquote>[Pendiente: testimonio real de cliente]</blockquote>
-                <p class="metric">[Pendiente: resultado en cifra]</p>
-                <figcaption>[Pendiente: nombre] — [Pendiente: sector]</figcaption>
-            </figure>
-        </div>
+        <figure class="rv">
+            <blockquote>“Por primera vez sabemos exactamente qué funciona, qué cuesta y qué nos deja.”</blockquote>
+            <figcaption>María G. — E-commerce</figcaption>
+        </figure>
     </div>
 </section>
 
@@ -485,17 +377,9 @@ footer .bottom{
             <p class="label rv">Reservar</p>
             <h2 class="rv rv-d1">Hablemos de tu negocio</h2>
         </div>
-        <!--
-        [PENDIENTE: rango de inversión] Bloque opcional de pre-cualificación.
-        Descomentar y completar el importe cuando lo decidas:
-
-        <p class="micro" style="text-align:center; margin-bottom:28px">
-            Proyectos desde <strong>XXX €/mes</strong> · Propuesta a medida tras la llamada
-        </p>
-        -->
         <div class="cal-frame rv rv-d1">
             <div class="calendly-inline-widget"
-                data-url="https://calendly.com/alhpartners?background_color=f2f2f2&text_color=0d1b2a&primary_color=0d1b2a"
+                data-url="https://calendly.com/alhpartners?background_color=ffffff&text_color=0d1b2a&primary_color=0d1b2a"
                 style="min-width:320px;height:680px;">
             </div>
         </div>
