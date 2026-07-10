@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ALH Partners | Consultoría de Marketing Digital para Pymes y E-commerce en España</title>
+<meta name="description" content="Consultoría de marketing digital en España para pymes, e-commerce, retail y negocios locales. Estrategia, campañas y conversión con resultados medibles. Primera llamada gratuita."/>
+<meta name="theme-color" content="#0D1B2A"/>
+<meta property="og:title" content="ALH Partners — Consultoría de Marketing"/>
+<meta property="og:description" content="Pensamiento estratégico. Resultados reales. Reserva una llamada gratuita."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://malhamarodriguez.github.io/prototipo1/assets/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<link rel="icon" href="favicon.ico" sizes="48x48"/>
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ALH Partners",
+  "description": "Consultoría de marketing digital para pymes, e-commerce y negocios locales en España.",
+  "email": "contact@alhpartners.com",
+  "areaServed": "ES"
+}
+</script>
+
+<style>
+/* ══════════ PALETA — Brand Board v2 ══════════ */
+:root{
+    --navy:       #0D1B2A;
+    --sage:       #7D8F7A;
+    --taupe:      #CBBBA0;
+    --grey-light: #F2F2F2;
+    --white:      #FFFFFF;
+    --ink-dim:    #5A6472;
+    --line:       #E7E3DC;
+    --serif:      'Cormorant Garamond', Georgia, serif;
+    --sans:       'Inter', system-ui, sans-serif;
+    --ease:       cubic-bezier(.22,1,.36,1);
+    --nav-h:      80px;
+}
+
+/* ══════════ BASE ══════════ */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+    background:var(--white); color:var(--navy);
+    font-family:var(--sans); font-weight:400; font-size:16px; line-height:1.7;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+::selection{ background:var(--taupe); color:var(--navy); }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+:focus-visible{ outline:2px solid var(--sage); outline-offset:3px; }
+
+.container{ width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(22px,5vw,48px); }
+
+.label{
+    font-size:11px; font-weight:500; letter-spacing:.32em; text-transform:uppercase; color:var(--ink-dim);
+    display:inline-flex; align-items:center; gap:14px;
+}
+.label::before,.label::after{ content:''; width:26px; height:1px; background:var(--taupe); }
+h1,h2{ font-family:var(--serif); font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:.02em; }
+.lede{ color:var(--ink-dim); font-weight:400; font-size:clamp(16px,1.3vw,18px); }
+
+.btn{
+    display:inline-flex; align-items:center; gap:12px;
+    background:var(--navy); color:var(--white);
+    padding:17px 34px; font-size:12px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+    transition:background .35s var(--ease), color .35s var(--ease), transform .35s var(--ease);
+}
+.btn:hover{ background:var(--sage); color:var(--navy); transform:translateY(-2px); }
+.btn .arr{ transition:transform .35s var(--ease); }
+.btn:hover .arr{ transform:translateX(5px); }
+.btn-line{ background:transparent; color:var(--navy); border:1px solid var(--navy); }
+.btn-line:hover{ background:var(--navy); color:var(--white); }
+.micro{ font-size:12px; letter-spacing:.06em; color:var(--ink-dim); }
+
+/* Scroll-reveal (fade-in + translate-y) */
+.rv{ opacity:0; transform:translateY(26px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+.rv.in{ opacity:1; transform:none; }
+.rv-d1{ transition-delay:.12s } .rv-d2{ transition-delay:.24s } .rv-d3{ transition-delay:.36s }
+
+/* ══════════ NAVBAR ══════════ */
+nav{
+    position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h);
+    display:flex; align-items:center; background:var(--white);
+    border-bottom:1px solid transparent; transition:border-color .4s;
+}
+body.scrolled nav{ border-color:var(--line); }
+nav .inner{ display:flex; align-items:center; justify-content:space-between; width:100%; }
+.brand{ display:flex; align-items:center; gap:14px; }
+.brand img{ height:38px; width:auto; }
+.brand .wordmark{
+    font-family:var(--serif); font-size:19px; font-weight:600; letter-spacing:.14em; color:var(--navy); line-height:1.1;
+}
+.brand .wordmark small{
+    display:block; font-family:var(--sans); font-size:8.5px; font-weight:500;
+    letter-spacing:.42em; color:var(--ink-dim); margin-top:2px;
+}
+.nav-links{ display:flex; align-items:center; gap:36px; }
+.nav-links a:not(.btn){
+    font-size:11.5px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--navy);
+    padding:6px 0; border-bottom:1px solid transparent; transition:border-color .3s, color .3s;
+}
+.nav-links a:not(.btn):hover{ color:var(--sage); border-color:var(--taupe); }
+.nav-links .btn{ padding:12px 24px; }
+#burger{ display:none; flex-direction:column; gap:6px; padding:8px; z-index:102; }
+#burger span{ width:24px; height:1.5px; background:var(--navy); transition:transform .35s var(--ease), opacity .3s; }
+#burger.open span:nth-child(1){ transform:translateY(7.5px) rotate(45deg); }
+#burger.open span:nth-child(2){ opacity:0; }
+#burger.open span:nth-child(3){ transform:translateY(-7.5px) rotate(-45deg); }
+#menu{
+    position:fixed; inset:0; z-index:101; background:var(--white);
+    display:flex; flex-direction:column; justify-content:center; align-items:center; gap:8px;
+    opacity:0; visibility:hidden; transition:opacity .45s var(--ease), visibility .45s;
+}
+#menu.open{ opacity:1; visibility:visible; }
+#menu a:not(.btn){ font-family:var(--serif); font-size:32px; color:var(--navy); padding:9px 0; }
+#menu .btn{ margin-top:26px; }
+@media (max-width:860px){
+    .nav-links{ display:none; }
+    #burger{ display:flex; }
+}
+
+/* ══════════ HERO ══════════ */
+#hero{
+    min-height:100svh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; padding:calc(var(--nav-h) + 40px) 24px 72px; position:relative;
+    background:var(--white);
+}
+#hero .mono{ height:clamp(76px,10vw,110px); width:auto; margin-bottom:36px; }
+#hero .label{ margin-bottom:26px; }
+#hero h1{
+    font-size:clamp(38px,5.6vw,72px); max-width:18ch;
+    text-transform:uppercase; letter-spacing:.04em; font-weight:600;
+}
+#hero h1 em{ font-style:italic; text-transform:none; letter-spacing:.02em; color:var(--sage); }
+#hero .lede{ margin:26px auto 44px; max-width:46ch; }
+#hero .ctas{ display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap; }
+#hero .micro{ margin-top:22px; }
+#hero .rule{
+    position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+    width:1px; height:64px; background:var(--taupe);
+}
+
+/* ══════════ STATS (texto fijo honesto) ══════════ */
+#stats{ background:var(--grey-light); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+#stats .row{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+    padding:clamp(48px,6vw,68px) 0; text-align:center;
+}
+.stat .num{
+    font-family:var(--serif); font-size:clamp(38px,4.4vw,54px); font-weight:600; color:var(--navy); line-height:1;
+}
+.stat .num em{ font-style:italic; color:var(--sage); }
+.stat p{ margin-top:8px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-dim); }
+@media (max-width:700px){ #stats .row{ grid-template-columns:1fr; gap:28px; } }
+
+/* ══════════ SECCIONES ══════════ */
+section{ position:relative; }
+.pad{ padding:clamp(96px,11vw,140px) 0; }
+.head{ text-align:center; margin-bottom:clamp(48px,6vw,72px); }
+.head h2{ font-size:clamp(34px,4.6vw,54px); margin-top:20px; }
+
+/* Servicios */
+.services{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.svc{
+    background:var(--white); padding:clamp(34px,4vw,56px);
+    transition:background .4s; position:relative;
+}
+.svc:hover{ background:var(--grey-light); }
+.svc i{
+    font-family:var(--serif); font-style:italic; font-size:17px; color:var(--sage); display:block; margin-bottom:22px;
+}
+.svc h3{ font-family:var(--serif); font-size:26px; font-weight:600; color:var(--navy); margin-bottom:10px; }
+.svc p{ color:var(--ink-dim); font-size:14.5px; max-width:38ch; }
+.svc::after{
+    content:''; position:absolute; left:0; bottom:0; height:2px; width:100%;
+    background:var(--sage); transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease);
+}
+.svc:hover::after{ transform:scaleX(1); }
+@media (max-width:760px){ .services{ grid-template-columns:1fr; } }
+
+/* Proceso (navy) */
+#proceso{ background:var(--navy); }
+#proceso .label{ color:var(--taupe); }
+#proceso .label::before,#proceso .label::after{ background:rgba(125,143,122,.4); }
+#proceso h2{ color:var(--white); }
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(32px,5vw,64px); }
+.step{ text-align:center; }
+.step .n{
+    font-family:var(--serif); font-style:italic; font-size:20px; color:var(--taupe);
+    display:inline-grid; place-items:center; width:56px; height:56px;
+    border:1px solid rgba(125,143,122,.35); border-radius:50%; margin-bottom:20px;
+}
+.step h3{ font-family:var(--serif); font-size:24px; font-weight:600; color:var(--white); margin-bottom:8px; }
+.step p{ color:#A8B4C2; font-size:14px; max-width:26ch; margin:0 auto; }
+@media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
+
+/* Testimonio (gris claro) */
+#quote{ background:var(--grey-light); text-align:center; }
+#quote blockquote{
+    font-family:var(--serif); font-size:clamp(24px,3.2vw,36px); font-weight:500; font-style:italic;
+    color:var(--navy); max-width:26ch; margin:0 auto; line-height:1.4;
+}
+#quote figcaption{ margin-top:24px; font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); }
+
+/* Agendar (formulario) */
+#agendar{ background:var(--white); }
+#agendar .head{ margin-bottom:clamp(36px,5vw,52px); }
+.book-form{ max-width:520px; margin:0 auto; }
+.field{ position:relative; margin-bottom:36px; }
+.field input{
+    width:100%; background:transparent; border:0; border-bottom:1px solid var(--line);
+    padding:14px 0 12px; font:inherit; font-size:15px; color:var(--navy);
+    transition:border-color .4s;
+}
+.field input:focus{ outline:none; border-color:var(--sage); }
+.field label{
+    position:absolute; left:0; top:14px; color:var(--ink-dim); font-size:14px; pointer-events:none;
+    transition:all .35s var(--ease);
+}
+.field input:focus ~ label,
+.field input:not(:placeholder-shown) ~ label{
+    top:-12px; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--sage);
+}
+.field .fline{
+    position:absolute; bottom:0; left:0; width:100%; height:1px; background:var(--sage);
+    transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease);
+}
+.field input:focus ~ .fline{ transform:scaleX(1); }
+.book-form .btn{ width:100%; justify-content:center; }
+.book-form .micro{ display:block; text-align:center; margin-top:18px; }
+#form-ok{
+    display:none; max-width:520px; margin:0 auto 34px; padding:16px 20px; text-align:center;
+    border:1px solid var(--sage); background:rgba(125,143,122,.08); color:var(--navy); font-size:14px;
+}
+#form-ok.show{ display:block; }
+
+/* ══════════ FOOTER ══════════ */
+footer{ background:var(--navy); color:#A8B4C2; }
+footer .top{
+    display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;
+    padding:clamp(48px,6vw,72px) 0;
+}
+footer .wordmark{
+    font-family:var(--serif); font-size:20px; font-weight:600; letter-spacing:.14em; color:var(--white);
+}
+footer .wordmark small{
+    display:block; font-family:var(--sans); font-size:8.5px; font-weight:500; letter-spacing:.42em; color:var(--taupe); margin-top:2px;
+}
+footer .fcontact{ display:flex; align-items:center; gap:34px; flex-wrap:wrap; }
+footer .fcontact a:not(.btn-book){ font-size:13px; letter-spacing:.06em; border-bottom:1px solid transparent; transition:color .3s, border-color .3s; }
+footer .fcontact a:not(.btn-book):hover{ color:var(--white); border-color:var(--taupe); }
+footer .btn-book{
+    display:inline-flex; align-items:center; gap:10px;
+    border:1px solid rgba(203,187,160,.5); color:var(--white);
+    padding:11px 22px; font-size:11px; font-weight:500; letter-spacing:.16em; text-transform:uppercase;
+    transition:background .35s var(--ease), border-color .35s, color .35s;
+}
+footer .btn-book:hover{ background:var(--taupe); border-color:var(--taupe); color:var(--navy); }
+footer .bottom{
+    border-top:1px solid rgba(125,143,122,.2); padding:22px 0;
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+    font-size:11px; letter-spacing:.1em;
+}
+
+@media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{ transition-duration:.01ms!important; animation-duration:.01ms!important; }
+    html{ scroll-behavior:auto; }
+    .rv{ opacity:1; transform:none; }
+}
+</style>
+</head>
+<body>
+
+<!--
+Formulario de agenda: envía vía FormSubmit a contact@alhpartners.com
+(atributo action del formulario). La primera solicitud disparará un email
+de activación de FormSubmit a ese buzón: pulsar "Activate" una única vez.
+-->
+
+<!-- NAVBAR -->
+<nav>
+    <div class="container inner">
+        <a href="#hero" class="brand" aria-label="ALH Partners">
+            <img src="assets/logo-alh.png" alt="Monograma ALH" width="480" height="407"/>
+            <span class="wordmark">ALH PARTNERS<small>CONSULTING</small></span>
+        </a>
+        <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#agendar" class="btn"><span>Agendar una llamada</span></a>
+        </div>
+        <button id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div id="menu" aria-hidden="true">
+    <a href="#servicios">Servicios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#agendar" class="btn"><span>Agendar una llamada</span><span class="arr">→</span></a>
+</div>
+
+<!-- HERO -->
+<header id="hero">
+    <img class="mono rv in" src="assets/logo-alh.png" alt="" width="480" height="407"/>
+    <p class="label rv in">ALH Partners · Consulting</p>
+    <h1 class="rv in">Pensamiento estratégico.<br/><em>Resultados reales.</em></h1>
+    <p class="lede rv rv-d1 in">Consultoría de marketing para empresas que quieren crecer con claridad y método.</p>
+    <div class="ctas rv rv-d2 in">
+        <a href="#servicios" class="btn"><span>Ver servicios</span><span class="arr">→</span></a>
+        <a href="#agendar" class="btn btn-line"><span>Agendar una llamada</span></a>
+    </div>
+    <p class="micro rv rv-d3 in">30 minutos · Sin compromiso</p>
+    <span class="rule" aria-hidden="true"></span>
+</header>
+
+<!-- STATS: texto fijo honesto (sin contadores animados) -->
+<section id="stats">
+    <div class="container row">
+        <div class="stat rv"><div class="num">100<em>%</em></div><p>Atención personalizada</p></div>
+        <div class="stat rv rv-d1"><div class="num">4</div><p>Áreas de servicio</p></div>
+        <div class="stat rv rv-d2"><div class="num">72<em>h</em></div><p>Tu plan de acción</p></div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="pad">
+    <div class="container">
+        <div class="head">
+            <p class="label rv">Servicios</p>
+            <h2 class="rv rv-d1">Lo que hacemos por ti</h2>
+        </div>
+        <div class="services">
+            <article class="svc rv">
+                <i>I.</i>
+                <h3>Estrategia</h3>
+                <p>Diagnóstico de tu negocio y plan de crecimiento a 90 días.</p>
+            </article>
+            <article class="svc rv rv-d1">
+                <i>II.</i>
+                <h3>Medios pagados</h3>
+                <p>Campañas en Google y Meta enfocadas al retorno, no a los likes.</p>
+            </article>
+            <article class="svc rv rv-d2">
+                <i>III.</i>
+                <h3>Conversión</h3>
+                <p>Embudos y automatización que convierten visitas en clientes.</p>
+            </article>
+            <article class="svc rv rv-d3">
+                <i>IV.</i>
+                <h3>Branding</h3>
+                <p>Una identidad que eleva tu valor y te diferencia.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="pad">
+    <div class="container">
+        <div class="head">
+            <p class="label rv">Proceso</p>
+            <h2 class="rv rv-d1">Empezar es simple</h2>
+        </div>
+        <div class="steps">
+            <div class="step rv"><span class="n">1</span><h3>Llamada gratuita</h3><p>30 minutos. Diagnóstico honesto de tu situación.</p></div>
+            <div class="step rv rv-d1"><span class="n">2</span><h3>Plan a medida</h3><p>Propuesta clara con prioridades y plazos, en 72 horas.</p></div>
+            <div class="step rv rv-d2"><span class="n">3</span><h3>Ejecución</h3><p>Resultados medibles desde el primer trimestre.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIO -->
+<section id="quote" class="pad">
+    <div class="container">
+        <figure class="rv">
+            <blockquote>“Por primera vez sabemos exactamente qué funciona, qué cuesta y qué nos deja.”</blockquote>
+            <figcaption>María G. — E-commerce</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- AGENDAR -->
+<section id="agendar" class="pad">
+    <div class="container">
+        <div class="head">
+            <p class="label rv">Agendar</p>
+            <h2 class="rv rv-d1">Hablemos de tu negocio</h2>
+        </div>
+        <p id="form-ok" role="status">✓ Solicitud enviada. Te escribimos en menos de 24&nbsp;horas para confirmar día y hora.</p>
+        <form class="book-form rv rv-d1" action="https://formsubmit.co/contact@alhpartners.com" method="POST">
+            <input type="hidden" name="_subject" value="Nueva solicitud de llamada — ALH Partners"/>
+            <input type="hidden" name="_template" value="table"/>
+            <input type="hidden" name="_captcha" value="false"/>
+            <input type="hidden" name="_next" value="https://malhamarodriguez.github.io/prototipo1/?enviado=1#agendar"/>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+            <div class="field">
+                <input id="f-nombre" type="text" name="nombre" placeholder=" " required autocomplete="name"/>
+                <label for="f-nombre">Nombre</label>
+                <span class="fline"></span>
+            </div>
+            <div class="field">
+                <input id="f-correo" type="email" name="correo" placeholder=" " required autocomplete="email"/>
+                <label for="f-correo">Correo electrónico</label>
+                <span class="fline"></span>
+            </div>
+            <button type="submit" class="btn"><span>Solicitar llamada</span><span class="arr">→</span></button>
+            <span class="micro">Te escribimos en menos de 24 horas · Sin compromiso</span>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+    <div class="container">
+        <div class="top">
+            <span class="wordmark">ALH PARTNERS<small>CONSULTING</small></span>
+            <div class="fcontact">
+                <a href="mailto:contact@alhpartners.com">contact@alhpartners.com</a>
+                <a href="#" rel="noopener">LinkedIn</a>
+                <a class="btn-book" href="#agendar">Agendar una llamada</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <span>© 2026 ALH Partners</span>
+            <span>Marketing · Estrategia · Resultados</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* Scroll: hairline en nav */
+addEventListener('scroll', () => {
+    document.body.classList.toggle('scrolled', scrollY > 40);
+}, { passive: true });
+
+/* Menú móvil */
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+function toggleMenu(force){
+    const open = force !== undefined ? force : !menu.classList.contains('open');
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    menu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => toggleMenu());
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+/* Confirmación del formulario (vuelta desde FormSubmit con ?enviado=1) */
+if (new URLSearchParams(location.search).has('enviado')) {
+    document.getElementById('form-ok').classList.add('show');
+    history.replaceState(null, '', location.pathname + '#agendar');
+}
+
+/* Scroll-reveal — respeta prefers-reduced-motion (el CSS ya desactiva la transición) */
+const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .15, rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
